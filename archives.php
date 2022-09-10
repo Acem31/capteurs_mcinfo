@@ -26,6 +26,46 @@
 				echo '</pre>';
 				?>
 		</div>
+			<div class="capt">
+			<?php
+				$record["18:30"] = '23.5';
+				$record["18:00"] = '24';
+				$record["17:30"] = '24.5';
+				echo '<pre>';
+				print_r($record);
+				echo '</pre>';
+				?>
+		</div>
+			<div class="capt">
+			<?php
+				$record["18:30"] = '23.5';
+				$record["18:00"] = '24';
+				$record["17:30"] = '24.5';
+				echo '<pre>';
+				print_r($record);
+				echo '</pre>';
+				?>
+		</div>
+			<div class="capt">
+			<?php
+				$record["18:30"] = '23.5';
+				$record["18:00"] = '24';
+				$record["17:30"] = '24.5';
+				echo '<pre>';
+				print_r($record);
+				echo '</pre>';
+				?>
+		</div>
+			<div class="capt">
+			<?php
+				$record["18:30"] = '80%';
+				$record["18:00"] = '82%';
+				$record["17:30"] = '84%';
+				echo '<pre>';
+				print_r($record);
+				echo '</pre>';
+				?>
+		</div>
 			
 		</div>
 	</div>
