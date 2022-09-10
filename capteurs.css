@@ -4,6 +4,9 @@ body {
 	margin: 0;
 	font-family: "Lucida Sans Typewriter","monospace";
 }
+h2 {
+	color: #1F618D;
+}
 #menu {
 	display: flex;
 	justify-content: space-around;
@@ -27,6 +30,7 @@ body {
 }
 #menu ul {
 	display: flex;
+	flex-direction: row;
 	flex-wrap: nowrap;
 }
 #menu li {
@@ -36,6 +40,66 @@ body {
 	padding: 1em;
 	display: flex;
 	justify-content: space-around;
+}
+.capt {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 2em;
+}
+.capt h2, p {
+	padding-bottom: 1em;
+	padding-top: 1em;
+	text-align: center;
+}
+.capt p {
+	font-weight: bold;
+	font-size: 2em;
+}
+#hygro {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 2em;
+}
+#hygro h2, p {
+	padding-bottom: 1em;
+	padding-top: 1em;
+	text-align: center;
+}
+#hygro p {
+	font-weight: bold;
+	font-size: 2em;
+}
+#reset {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 2em;
+}
+#reset h2 {
+	color: red;
+}
+#reset h2 , button {
+	padding-bottom: 1em;
+	padding-top: 1em;
+	text-align: center;
+}
+#reset button {
+	border-color: red;
+	background-color: gray;
+	color: white;
+	font-size: 1em;
+	font-weight: bold;
+	border-radius: 6px;
+}
+#reset button:hover {
+	border-color: gray;
+	background-color: red;
+	color: white;
+	font-size: 1em;
+	font-weight: bold;
+	border-radius: 6px;
 }
 footer {
 	font-size: 0.7em;
