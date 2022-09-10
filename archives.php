@@ -17,6 +17,7 @@
       </div>
 		<div class="zone">
         <div class="capt">
+			<h2>Capteur 1</h2>
 			<?php
 				$record["18:30"] = '23.5';
 				$record["18:00"] = '24';
@@ -27,6 +28,7 @@
 				?>
 		</div>
 			<div class="capt">
+				<h2>Capteur 2</h2>
 			<?php
 				$record["18:30"] = '23.5';
 				$record["18:00"] = '24';
@@ -37,6 +39,7 @@
 				?>
 		</div>
 			<div class="capt">
+				<h2>Capteur 3</h2>
 			<?php
 				$record["18:30"] = '23.5';
 				$record["18:00"] = '24';
@@ -47,6 +50,7 @@
 				?>
 		</div>
 			<div class="capt">
+				<h2>Capteur 4</h2>
 			<?php
 				$record["18:30"] = '23.5';
 				$record["18:00"] = '24';
@@ -57,6 +61,7 @@
 				?>
 		</div>
 			<div class="capt">
+				<h2>Hygrométrie</h2>
 			<?php
 				$record["18:30"] = '80%';
 				$record["18:00"] = '82%';
