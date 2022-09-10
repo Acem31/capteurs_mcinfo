@@ -1,0 +1,40 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+	margin: 0;
+	font-family: "Lucida Sans Typewriter","monospace";
+}
+#menu {
+	display: flex;
+	justify-content: space-around;
+    padding:0;                  
+    background-color: #85C1E9; 
+	font-weight: bold;
+	font-size: 2em;
+}
+#menu a{
+	display: block;
+	min-width:250px;
+	text-decoration: none;
+	color: #FFFFFF;
+	text-shadow: 1px 1px 5px white;
+}
+#menu a:active {
+	text-shadow: 1px 1px 5px #AEAEAE;
+}
+#menu a:hover {
+	text-shadow: 1px 1px 5px #AEAEAE;
+}
+#menu ul {
+	display: flex;
+	flex-wrap: nowrap;
+}
+#menu li {
+	list-style-type: none ;
+}
+.zone {
+	padding: 1em;
+}
+footer {
+	font-size: 0.7em;
+}
