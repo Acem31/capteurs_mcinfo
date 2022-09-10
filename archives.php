@@ -15,8 +15,18 @@
           <li><a href="./archives.php" title="Archives des capteurs" target="_self">Archives</a></li>
         </ul>
       </div>
-      
-    </div>
+		<div class="zone">
+        <div class="capt">
+			<?php
+				$array = array(
+    			"18:30" => "24°",
+    			"18:00" => "24,5°",
+				);
+			?>
+		</div>
+			
+		</div>
+	</div>
 	  <footer>
 		  <center>
 			  <p>Copyright 
