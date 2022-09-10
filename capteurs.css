@@ -22,9 +22,6 @@ h2 {
 	color: #FFFFFF;
 	text-shadow: 1px 1px 5px white;
 }
-#menu a:active {
-	text-shadow: 1px 1px 5px #AEAEAE;
-}
 #menu a:hover {
 	text-shadow: 1px 1px 5px #AEAEAE;
 }
