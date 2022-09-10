@@ -11,8 +11,8 @@
     <div id="doc3" class="yui-t1">
       <div id="menu">
         <ul>
-          <li><a href="index.php" title="Valeurs en direct" target="_self">Direct</a></li>
-          <li><a href="archives.php" title="Archives des capteurs" target="_self">Archives</a></li>
+          <li><a href="./index.php" title="Valeurs en direct" target="_self">Direct</a></li>
+          <li><a href="./archives.php" title="Archives des capteurs" target="_self">Archives</a></li>
         </ul>
       </div>
       <div class="zone">
