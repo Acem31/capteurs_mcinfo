@@ -17,24 +17,30 @@
       </div>
       <div class="zone">
         <div class="capt">
-          Capt1
+          <h2>Capteur 1</h2>
+			<p>VALEUR%?°</p>
         </div>
         <div class="capt">
-          Capt2
+          <h2>Capteur 2</h2>
+			<p>VALEUR%?°</p>
         </div>
         <div class="capt">
-          Capt3
+          <h2>Capteur 3</h2>
+			<p>VALEUR%?°</p>
         </div>
         <div class="capt">
-          Capt4
+          <h2>Capteur 4</h2>
+			<p>VALEUR%?°</p>
         </div>
       </div>
       <div class="zone">
         <div id="hygro">
-          Capt Hygro
+          <h2>Hygrométrie</h2>
+			<p>VALEUR%?%</p>
         </div>
         <div id="reset">
-          Reset données
+          <h2>Reset données</h2>
+			<button>Remise à zéro</button>
         </div>
       </div>
     </div>
