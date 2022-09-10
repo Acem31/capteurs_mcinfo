@@ -18,11 +18,13 @@
 		<div class="zone">
         <div class="capt">
 			<?php
-				$array = array(
-    			"18:30" => "24°",
-    			"18:00" => "24,5°",
-				);
-			?>
+				$record["18:30"] = '23.5';
+				$record["18:00"] = '24';
+				$record["17:30"] = '24.5';
+				echo '<pre>';
+				print_r($record);
+				echo '</pre>';
+				?>
 		</div>
 			
 		</div>
