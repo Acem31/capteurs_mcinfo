@@ -4,9 +4,9 @@ def mysqlconnect():
 	# To connect MySQL database
 	conn = pymysql.connect(
 		host='localhost',
-		user='root',
-		password = "pass",
-		db='College',
+		user='couch_user',
+		password = "couchpass",
+		db='couch_DB',
 		)
 	
 	cur = conn.cursor()
