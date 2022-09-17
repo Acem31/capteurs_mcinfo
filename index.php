@@ -18,7 +18,16 @@
       <div class="zone">
         <div class="capt">
           <h2>Capteur 1</h2>
-			<p>VALEUR%?°</p>
+			<p>	<?php
+		$mysqli = new mysqli("localhost", "couch_user", "couchpass", "couch_DB'");
+		$mysqli->set_charset("utf8");
+		$requete = "SELECT * FROM capteur1";
+		$resultat = $mysqli->query($requete);
+		while ($ligne = $resultat->fetch_assoc()) {
+			echo $ligne['temperature'] .;
+		}
+		$mysqli->close();
+		?></p>
         </div>
         <div class="capt">
           <h2>Capteur 2</h2>
