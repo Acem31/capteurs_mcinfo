@@ -19,15 +19,14 @@
         <div class="capt">
 			<h2>Capteur 1</h2>
 			<?php
-		$mysqli = new mysqli("mysql_db", "root", "couchpass31", "couch_DB");
-    if($mysqli === false){
-      die("Problème de base de données! " . mysqli_connect_error());
-  }
-		$mysqli->set_charset("utf8");
-		$requete = "SELECT * FROM capteur1;
-		$listetemp = $mysqli->query($requete)->fetchAll();
-		}
-		?>
+				$mysqli = new mysqli("mysql_db", "root", "couchpass31", "couch_DB");
+    			if($mysqli === false){
+      				die("Problème de base de données! " . mysqli_connect_error());
+  				}
+				$mysqli->set_charset("utf8");
+				$requete = "SELECT * FROM capteur1;
+				$listetemp = $mysqli->query($requete)->fetchAll();
+			?>
 		<ul>
   			<?php foreach($listetemp as $temperature){ ?>
   				<li>
