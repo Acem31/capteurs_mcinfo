@@ -26,12 +26,13 @@
 		$mysqli->set_charset("utf8");
 		$requete = "SELECT temperature FROM capteur1 WHERE id=1";
 
-    if ($resultat = $mysqli->query($requete)) {
-      while ($info = $resultat->fetch_field()) {
-        printf("temperature:  %s\n", $info->temperature);
-      }
+    $resultat->field_seek(0);
+    $info = $resultat->fetch_field();
+
+    printf($info->temperature);
+
       $resultat->close();
-    }
+      
 		$mysqli->close();
 		?>°</p>
         </div>
