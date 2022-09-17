@@ -19,13 +19,23 @@
         <div class="capt">
 			<h2>Capteur 1</h2>
 			<?php
-				$record["18:30"] = '23.5';
-				$record["18:00"] = '24';
-				$record["17:30"] = '24.5';
-				echo '<pre>';
-				print_r($record);
-				echo '</pre>';
-				?>
+		$mysqli = new mysqli("mysql_db", "root", "couchpass31", "couch_DB");
+    if($mysqli === false){
+      die("Problème de base de données! " . mysqli_connect_error());
+  }
+		$mysqli->set_charset("utf8");
+		$requete = "SELECT * FROM capteur1;
+		$listetemp = $mysqli->query($requete)->fetchAll();
+		}
+		<ul>
+  			<?php foreach($listetemp as $temperature){ ?>
+  				<li>
+    			<h3>
+      			<?= "{$temperature['temperature']} - {$temperature['horodatage']}"; ?>
+    			</h3>
+  				</li>
+  			<?php } ?>
+		</ul>
 		</div>
 			<div class="capt">
 				<h2>Capteur 2</h2>
