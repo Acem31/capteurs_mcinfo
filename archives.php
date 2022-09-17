@@ -84,6 +84,9 @@
 			
 		</div>
 	</div>
+	<?php
+	$mysqli->close();
+	?>
 	  <footer>
 		  <center>
 			  <p>Copyright 
