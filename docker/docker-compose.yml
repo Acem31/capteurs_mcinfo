@@ -3,6 +3,7 @@ version: '3.3'
 services:
   couch-apache-php:
     build:
+      context: ./
       dockerfile: ./Dockerfile
     restart: always
     depends_on:
