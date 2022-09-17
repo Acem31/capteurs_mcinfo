@@ -27,7 +27,7 @@
 		$requete = "SELECT temperature FROM capteur1 WHERE id=1";
 
     if ($resultat = $mysqli->query($requete)) {
-      while $info = $resultat->fetch_field()) {
+      while ($info = $resultat->fetch_field()) {
         printf("temperature:  %s\n", $info->temperature);
       }
       $resultat->close();
