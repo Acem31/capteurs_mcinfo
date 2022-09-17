@@ -26,7 +26,7 @@
 		$requete = "SELECT * FROM capteur1 ORDER BY id DESC";
     $resultat = mysqli_query($mysqli, $requete);
 
-    mysqli_data_seek($resultat, 1);
+    mysqli_data_seek($resultat, 0);
     $ligne = mysqli_fetch_row($resultat);
     printf("%s" , $ligne[1]);
     
