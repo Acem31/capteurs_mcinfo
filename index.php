@@ -28,7 +28,7 @@
 
     mysqli_data_seek($resultat, 0);
     $ligne = mysqli_fetch_row($resultat);
-    printf("%s" , $ligne['temperature']);
+    printf("%s" , $ligne[1]);
     
 		$mysqli->close();
 		?>°</p>
