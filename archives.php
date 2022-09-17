@@ -27,6 +27,7 @@
 		$requete = "SELECT * FROM capteur1;
 		$listetemp = $mysqli->query($requete)->fetchAll();
 		}
+		?>
 		<ul>
   			<?php foreach($listetemp as $temperature){ ?>
   				<li>
