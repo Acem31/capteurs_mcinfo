@@ -26,7 +26,7 @@
 				$mysqli->set_charset("utf8");
 				$requete = "SELECT * FROM capteur1;
 				$data = mysql_fetch_array($requete);
-				mysql_free_result ($requete);
+				mysql_free_result($requete);
 				echo $data['temperature'];
 			?>
 		</div>
