@@ -23,11 +23,12 @@
     			if($mysqli === false){
       				die("Problème de base de données! " . mysqli_connect_error());
   				}
-				$mysqli->set_charset("utf8");
-				$requete = "SELECT * FROM capteur1;
-				$data = mysql_fetch_array($requete);
-				mysql_free_result($requete);
-				echo $data['temperature'];
+				$requete = "SELECT temperature,  horodatage FROM capteur1;
+				
+				$resultat = mysqli_query($mysqli, $requete);
+				while	($ligne = mysqli_fetch_assoc($resultat))	{
+					printf("%s (%s)\n" , $row['temperature'] , $row['horodatage']);
+				}
 			?>
 		</div>
 			<div class="capt">
