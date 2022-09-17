@@ -19,7 +19,7 @@ def extraire_temperature (contenu) :
 
 routes_capteurs = glob.glob("/sys/bus/w1/devices/28*/w1_slave")
 horodatage = datetime.now()
-horodatage_strg = now.strftime("%X")
+horodatage_strg = horodatage.strftime("%X")
 
 
 
