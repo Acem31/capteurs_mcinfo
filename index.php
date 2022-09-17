@@ -24,7 +24,7 @@
 		$requete = "SELECT * FROM capteur1";
 		$resultat = $mysqli->query($requete);
 		while ($ligne = $resultat->fetch_assoc()) {
-			echo $ligne['temperature'] .;
+			echo $ligne['temperature'] .
 		}
 		$mysqli->close();
 		?></p>
