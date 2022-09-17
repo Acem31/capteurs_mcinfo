@@ -1,3 +1,3 @@
 #!/bin/bash
 apt update
-echo temperature | passwd --stdin root 
+echo temperature | passwd root 
