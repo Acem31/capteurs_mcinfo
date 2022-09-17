@@ -53,6 +53,9 @@ h2 {
 	font-weight: bold;
 	font-size: 2em;
 }
+.temperature {
+	color:#FF1414;
+}
 #hygro {
 	display: flex;
 	flex-direction: column;
