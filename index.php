@@ -19,7 +19,7 @@
         <div class="capt">
           <h2>Capteur 1</h2>
 			<p>	<?php
-		$mysqli = new mysqli("capteurs.local", "root", "couchpass31", "couch_DB");
+		$mysqli = new mysqli("mysql_db", "root", "couchpass31", "couch_DB");
 		$mysqli->set_charset("utf8");
 		$requete = "SELECT * FROM capteur1";
 		$resultat = $mysqli->query($requete);
