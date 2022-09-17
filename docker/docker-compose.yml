@@ -3,7 +3,7 @@ version: '3.3'
 services:
   couch-apache-php:
     build:
-      dockerfile: Dockerfile
+      dockerfile: ./Dockerfile
     restart: always
     depends_on:
       - mysql_db
