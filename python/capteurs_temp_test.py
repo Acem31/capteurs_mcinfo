@@ -35,9 +35,9 @@ if len(routes_capteurs) > 0 :
     print ("Temperature :", temperature, "°")
     print ("Heure :", horodatage_strg)
 
+else :
+    print("Sonde non détectee. Vérifier le branchement, ou rendez-vous dans la section montrant une solution possible")
+    
 sql = "INSERT INTO capteur1 (temperature, horodatage) VALUES (%s, %s)"
 val = (temperature, horodatage_strg)
 mycursor.execute(sql, val)
-
-else :
-    print("Sonde non détectee. Vérifier le branchement, ou rendez-vous dans la section montrant une solution possible")
