@@ -27,8 +27,9 @@
 				$requete = "SELECT * FROM capteur1 ORDER BY id DESC";
 				$resultat = mysqli_query($mysqli, $requete);
 
-				$ligne = mysqli_fetch_array($resultat, MYSQLI_NUM);
-				printf("%s | %s \n" , $ligne[1], $ligne[2]);
+				while ($ligne = $resultat->fetch_assoc()) {
+					echo $ligne['temperature'] . ' '<br>';
+				}
 			?>
 		</div>
 			<div class="capt">
