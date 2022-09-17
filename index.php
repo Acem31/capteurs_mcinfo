@@ -26,9 +26,9 @@
 		$requete = "SELECT temperature FROM capteur1";
     $resultat = mysqli_query($mysqli, $requete);
 
-    mysqli_data_seek($resultat, 0);
+    mysqli_data_seek($resultat, 1);
     $ligne = mysqli_fetch_row($resultat);
-    printf("%s" , $ligne[1]);
+    printf("%s" , $ligne['temperature']);
     
 		$mysqli->close();
 		?>°</p>
