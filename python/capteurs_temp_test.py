@@ -28,14 +28,16 @@ mycursor.execute("CREATE TABLE IF NOT EXISTS capteur1 (id INT AUTO_INCREMENT PRI
 routes_capteurs = glob.glob("/sys/bus/w1/devices/28*/w1_slave")
 horodatage = datetime.now()
 horodatage_strg = horodatage.strftime("%X")
+horodatage_day = horodatage.strftime("%x")
 
 if len(routes_capteurs) > 0 :
     contenu_fichier = lire_fichier(routes_capteurs[0])
     temperature = extraire_temperature(contenu_fichier)
     print ("Temperature :", temperature, "°")
     print ("Heure :", horodatage_strg)
-    sql = "INSERT INTO capteur1 (temperature, horodatage) VALUES (%s, %s)"
-    val = (temperature, horodatage_strg)
+    print ("Date :", horodatage_day)
+    sql = "INSERT INTO capteur1 (temperature, horodatage, date) VALUES (%s, %s, %s)"
+    val = (temperature, horodatage_strg, horodatage_day)
     mycursor.execute(sql, val)
     conn.commit()
 
