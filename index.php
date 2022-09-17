@@ -23,7 +23,7 @@
     if($mysqli === false){
       die("Problème de base de données! " . mysqli_connect_error());
   }
-		$requete = "SELECT temperature FROM capteur1";
+		$requete = "SELECT * FROM capteur1";
     $resultat = mysqli_query($mysqli, $requete);
 
     mysqli_data_seek($resultat, 1);
