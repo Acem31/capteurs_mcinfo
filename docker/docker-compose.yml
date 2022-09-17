@@ -1,0 +1,29 @@
+version: '3.3'
+
+services:
+  couch-apache-php:
+    build:
+      dockerfile: Dockerfile
+    restart: always
+    depends_on:
+      - mysql_db
+    container_name: appache_www
+    ports:
+      - "80:80"
+
+  mysql_db:
+    image: mysql:8.0
+    restart: always
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_DATABASE: couch_DB
+      MYSQL_ROOT_PASSWORD: couchpass31
+      MYSQL_USER: couch_user
+      MYSQL_PASSWORD: couchpass
+    ports:
+      - "3306:3306"
+    volumes:
+      - my-db:/var/lib/mysql
+
+volumes:
+  my-db:
