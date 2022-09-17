@@ -24,18 +24,11 @@
       die("Problème de base de données! " . mysqli_connect_error());
   }
 		$mysqli->set_charset("utf8");
-		$requete = "SELECT temperature FROM capteur1";
-		/*$resultat = $mysqli->query($requete);
+		$requete = "SELECT temperature FROM capteur1 WHERE id=0";
+		$resultat = $mysqli->query($requete);
 		while ($ligne = $resultat->fetch_assoc()) {
 			echo $ligne['temperature'];
-		}*/
-    if(mysqli_query($mysqli, $requete)){
-      $lastid = mysqli_insert_id($mysqli);
-      /*echo $lastid;*/
-      while ($row = $requete->fetch_row()){
-        echo $row[$lastid];
-      }
-    }
+		}
 		$mysqli->close();
 		?>°</p>
         </div>
