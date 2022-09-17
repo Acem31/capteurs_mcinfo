@@ -1,6 +1,6 @@
 import glob
 import pymysql
-import datetime
+from datetime import datetime
 
 
 
@@ -18,7 +18,8 @@ def extraire_temperature (contenu) :
 
 
 routes_capteurs = glob.glob("/sys/bus/w1/devices/28*/w1_slave")
-horodatage = datetime.datetime.now()
+horodatage = datetime.now()
+horodatage_strg = now.strftime("%X")
 
 
 
@@ -26,7 +27,7 @@ if len(routes_capteurs) > 0 :
     contenu_fichier = lire_fichier(routes_capteurs[0])
     temperature = extraire_temperature(contenu_fichier)
     print ("Temperature :", temperature, "°")
-    print ("Heure :", horodatage("%X"))
+    print ("Heure :", horodatage_strg)
 
 else :
     print("Sonde non détectee. Vérifier le branchement, ou rendez-vous dans la section montrant une solution possible")
