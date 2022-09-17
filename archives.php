@@ -27,7 +27,7 @@
 				
 				$resultat = mysqli_query($mysqli, $requete);
 				while	($ligne = mysqli_fetch_assoc($resultat))	{
-					printf("%s (%s)\n" , $row['temperature'] , $row['horodatage']);
+					printf("%s (%s)\n" , $row[1] , $row[2]);
 				}
 			?>
 		</div>
