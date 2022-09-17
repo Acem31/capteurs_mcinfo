@@ -31,7 +31,7 @@
 		}*/
     if(mysqli_query($mysqli, $requete)){
       $lastid = mysqli_insert_id($mysqli);
-      echo $lastid;
+      echo $lastid['temperature'];
     }
 		$mysqli->close();
 		?>°</p>
