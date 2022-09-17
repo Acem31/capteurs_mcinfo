@@ -28,12 +28,6 @@
 		}
 		$mysqli->close();
 		?></p>
-    <p><?php
-
-$mysqli = new mysqli("mysql_db", "root", "couchpass31", "couch_DB");
-
-echo $mysqli->host_info . "\n";
-?></p>
         </div>
         <div class="capt">
           <h2>Capteur 2</h2>
