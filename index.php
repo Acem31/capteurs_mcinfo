@@ -31,7 +31,10 @@
 		}*/
     if(mysqli_query($mysqli, $requete)){
       $lastid = mysqli_insert_id($mysqli);
-      echo $lastid;
+      /*echo $lastid;*/
+      while ($row = $requete->fetch_row()){
+        echo $row[$lastid];
+      }
     }
 		$mysqli->close();
 		?>°</p>
