@@ -20,12 +20,19 @@
           <h2>Capteur 1</h2>
 			<p>	<?php
 		$mysqli = new mysqli("mysql_db", "root", "couchpass31", "couch_DB");
+    if($mysqli === false){
+      die("Problème de base de données! " . mysqli_connect_error());
+  }
 		$mysqli->set_charset("utf8");
 		$requete = "SELECT * FROM capteur1";
-		$resultat = $mysqli->query($requete);
+		/*$resultat = $mysqli->query($requete);
 		while ($ligne = $resultat->fetch_assoc()) {
 			echo $ligne['temperature'];
-		}
+		}*/
+    if(mysqli_query($mysqli, $requete)){
+      $lastid = mysqli_insert_id($mysqli);
+      echo $lastid;
+    }
 		$mysqli->close();
 		?>°</p>
         </div>
