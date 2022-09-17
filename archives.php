@@ -23,12 +23,11 @@
     			if($mysqli === false){
       				die("Problème de base de données! " . mysqli_connect_error());
   				}
-				$requete = "SELECT temperature,  horodatage FROM capteur1;
-				
+				$requete = "SELECT * FROM capteur1 ORDER BY id DESC";
 				$resultat = mysqli_query($mysqli, $requete);
-				while	($ligne = mysqli_fetch_assoc($resultat))	{
-					printf('%s (%s)\n' , $row[1] , $row[2]);
-				}
+
+				$ligne = mysqli_fetch_array($resultat, MYSQLI_NUM);
+				printf("%s | %s \n" , $ligne[1], $ligne[2]);
 			?>
 		</div>
 			<div class="capt">
