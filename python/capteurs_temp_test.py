@@ -26,7 +26,7 @@ if len(routes_capteurs) > 0 :
     contenu_fichier = lire_fichier(routes_capteurs[0])
     temperature = extraire_temperature(contenu_fichier)
     print ("Temperature :", temperature, "°")
-    print ("Heure :", horodatage(%X	))
+    print ("Heure :", horodatage("%X"))
 
 else :
     print("Sonde non détectee. Vérifier le branchement, ou rendez-vous dans la section montrant une solution possible")
