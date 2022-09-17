@@ -23,18 +23,13 @@
     if($mysqli === false){
       die("Problème de base de données! " . mysqli_connect_error());
   }
-		$mysqli->set_charset("utf8");
-		$requete = "SELECT temperature FROM capteur1 WHERE id=1";
-    if ($resultat = $mysqli->query($requete)) {
+		$requete = "SELECT temperature FROM capteur1";
+    $resultat = mysqli_query($mysqli, $requete);
 
-    $resultat->field_seek(0);
-    $info = $resultat->fetch_field();
-
-    echo $info['temperature'];
-
-      $resultat->close();
-    }
-
+    mysqli_data_seek($resultat, 0);
+    $ligne = mysqli_fetch_row($resultat);
+    printf($row[0]);
+    
 		$mysqli->close();
 		?>°</p>
         </div>
