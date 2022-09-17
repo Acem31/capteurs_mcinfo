@@ -30,7 +30,7 @@
     $resultat->field_seek(0);
     $info = $resultat->fetch_field();
 
-    printf($info->temperature);
+    echo $info['temperature'];
 
       $resultat->close();
     }
