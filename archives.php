@@ -25,17 +25,10 @@
   				}
 				$mysqli->set_charset("utf8");
 				$requete = "SELECT * FROM capteur1;
-				$listetemp = $mysqli->query($requete)->fetchAll();
+				$data = mysql_fetch_array($requete);
+				mysql_free_result ($requete);
+				echo $data['temperature'];
 			?>
-		<ul>
-  			<?php foreach($listetemp as $temperature){ ?>
-  				<li>
-    			<h3>
-      			<?= "{$temperature['temperature']} - {$temperature['horodatage']}"; ?>
-    			</h3>
-  				</li>
-  			<?php } ?>
-		</ul>
 		</div>
 			<div class="capt">
 				<h2>Capteur 2</h2>
