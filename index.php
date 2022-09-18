@@ -54,20 +54,8 @@
         </div>
         <div id="reset">
           <h2>Reset données</h2>
-			<input type="button" id='script' name="scriptbutton" value=" Reset " onclick="goPython()">
-
-    		<script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-
-    		<script>
-        		function goPython(){
-            	$.ajax({
-              	url: "./python/reset.py",
-             	context: document.body
-				}).done(function() {
-             	alert('OK!');;
-            	});
-        	}
-    </script>
+			<form action="reset.php">
+			<input type="submit" class="bouton" value="Reset" />
         </div>
       </div>
     </div>
