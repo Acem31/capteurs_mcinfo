@@ -72,6 +72,39 @@ tr{
 	font-weight: bold;
 	font-size: 2em;
 }
+#donnees	{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-self: center;
+}
+#refresh	{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 2em;
+}
+#refresh h2 , input {
+	padding-bottom: 1em;
+	padding-top: 1em;
+	text-align: center;
+}
+#refresh input {
+	border-color: blue;
+	background-color: gray;
+	color: white;
+	font-size: 1em;
+	font-weight: bold;
+	border-radius: 6px;
+}
+#refresh input:hover {
+	border-color: gray;
+	background-color: blue;
+	color: white;
+	font-size: 1em;
+	font-weight: bold;
+	border-radius: 6px;
+}
 #reset {
 	display: flex;
 	flex-direction: column;
