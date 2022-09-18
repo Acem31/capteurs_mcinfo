@@ -5,7 +5,7 @@ RUN apt-get update; \
         git \
 		wget \
 		unzip \
-		python3.6\
+		python\
 	; \
 	a2enmod rewrite;\
 	/etc/init.d/apache2 restart;\
