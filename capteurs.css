@@ -81,12 +81,12 @@ tr{
 #reset h2 {
 	color: red;
 }
-#reset h2 , button {
+#reset h2 , input {
 	padding-bottom: 1em;
 	padding-top: 1em;
 	text-align: center;
 }
-#reset button {
+#reset input {
 	border-color: red;
 	background-color: gray;
 	color: white;
@@ -94,7 +94,7 @@ tr{
 	font-weight: bold;
 	border-radius: 6px;
 }
-#reset button:hover {
+#reset input:hover {
 	border-color: gray;
 	background-color: red;
 	color: white;
