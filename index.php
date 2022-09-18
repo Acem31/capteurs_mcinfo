@@ -61,7 +61,7 @@
     		<script>
         		function goPython(){
             	$.ajax({
-              	url: "./python/reset.py",
+              	url: "/python/reset.py",
              	context: document.body
 				}).done(function() {
              	alert('OK!');;
