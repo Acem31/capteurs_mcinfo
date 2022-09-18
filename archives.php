@@ -28,7 +28,7 @@
 				$resultat = mysqli_query($mysqli, $requete);
 
 				while ($ligne = $resultat->fetch_assoc()) {
-					printf("%s | %s | %s<br>", $ligne["temperature"], $ligne["horodatage"], $ligne["date"]);
+					printf("<div class="temperature">%s</div> | %s | %s<br>", $ligne["temperature"], $ligne["horodatage"], $ligne["date"]);
 				}
 			?>
 		</div>
