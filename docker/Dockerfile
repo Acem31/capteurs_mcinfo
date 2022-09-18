@@ -6,11 +6,13 @@ RUN apt-get update; \
 		wget \
 		unzip \
 		python3.9\
+		python3-pip
 	; \
 	a2enmod rewrite;\
 	/etc/init.d/apache2 restart;\
 	docker-php-ext-install mysqli; \
 	docker-php-ext-enable mysqli; \
+	pip3 install mysql-connector-python;\
 	rm -r /var/www/html ; \
 	cd /var/www ; \
 	git clone https://github.com/Acem31/capteurs_mcinfo.git /var/www/html/ ; \
