@@ -52,12 +52,20 @@
           <h2>Hygrométrie</h2>
 			<p>VALEUR%?%</p>
         </div>
-        <div id="reset">
-          <h2>Reset données</h2>
-			<form action="reset.php">
-			<input type="submit" class="bouton" value="Reset" />
-			</form>
-        </div>
+		<div id="donnees">
+        	<div id="reset">
+          		<h2>Reset données</h2>
+				<form action="reset.php">
+				<input type="submit" class="bouton" value="Reset" />
+				</form>
+        	</div>
+			<div id="refresh">
+				<h2>Mise à jour</h2>
+				<form action="reset.php">
+				<input type="submit" class="bouton" value="Mise à jour" />
+				</form>
+			</div>
+		</div>
       </div>
     </div>
 	  <footer>
