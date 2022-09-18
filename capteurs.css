@@ -33,20 +33,9 @@ h2 {
 #menu li {
 	list-style-type: none ;
 }
-table {
-  width: 100%;
-  background-color: #d4d4d5;
-  border-collapse: collapse;
-  border-width: 1em;
-  border-color: #d4d4d5;
-  border-style: solid;
-  color: #1f618d;
-}
-table td {
-  border-width: 1em;
-  border-color: #d4d4d5;
-  border-style: solid;
-  padding: 1em;
+table tr{
+	display: flex;
+	justify-content: space-around;
 }
 .zone {
 	padding: 1em;
