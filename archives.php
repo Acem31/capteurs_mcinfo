@@ -19,6 +19,7 @@
 		<div class="zone">
         <div class="capt">
 			<h2>Capteur 1</h2>
+			<table>
 			<?php
 				$mysqli = new mysqli("mysql_db", "root", "couchpass31", "couch_DB");
     			if($mysqli === false){
@@ -28,9 +29,10 @@
 				$resultat = mysqli_query($mysqli, $requete);
 
 				while ($ligne = $resultat->fetch_assoc()) {
-					printf("<div class="temperature">%s</div> | %s | %s<br>", $ligne["temperature"], $ligne["horodatage"], $ligne["date"]);
+					printf("<tr><td>%s</td><td>%s</td><td>%s</td></tr><br>", $ligne["temperature"], $ligne["horodatage"], $ligne["date"]);
 				}
 			?>
+			</table>
 		</div>
 			<div class="capt">
 				<h2>Capteur 2</h2>
