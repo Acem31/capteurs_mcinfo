@@ -33,7 +33,8 @@ horodatage_day = horodatage.strftime("%x")
 if len(routes_capteurs) > 0 :
     contenu_fichier = lire_fichier(routes_capteurs[0])
     temperature = extraire_temperature(contenu_fichier)
-    print ("Temperature :", temperature, "°")
+    roundtemp = round(temperature, 2)
+    print ("Temperature :", roundtemp, "°")
     print ("Heure :", horodatage_strg)
     print ("Date :", horodatage_day)
     sql = "INSERT INTO capteur1 (temperature, horodatage, date) VALUES (%s, %s, %s)"
