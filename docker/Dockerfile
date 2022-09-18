@@ -5,6 +5,7 @@ RUN apt-get update; \
         git \
 		wget \
 		unzip \
+		python3.6\
 	; \
 	a2enmod rewrite;\
 	/etc/init.d/apache2 restart;\
@@ -13,6 +14,8 @@ RUN apt-get update; \
 	rm -r /var/www/html ; \
 	cd /var/www ; \
 	git clone https://github.com/Acem31/capteurs_mcinfo.git /var/www/html/ ; \
-	chmod 755 -R /var/www/html;
+	chmod 777 -R /var/www/html; \
+	chown www-data:www-data /var/www/html/reset.php; \
+	chmod u+x /var/www/html/python/reset.py;
 
 EXPOSE 80
