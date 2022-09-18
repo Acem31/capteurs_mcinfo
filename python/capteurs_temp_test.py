@@ -4,7 +4,7 @@ from datetime import datetime
 
 
 conn = mysql.connector.connect(
-		host='mysql_db',
+		host='localhost',
 		user='root',
 		password = "couchpass31",
 		database='couch_DB',
@@ -24,6 +24,7 @@ def extraire_temperature (contenu) :
 
 mycursor = conn.cursor()
 
+mycursor.execute("CREATE TABLE IF NOT EXISTS capteur1 (id INT AUTO_INCREMENT PRIMARY KEY, temperature VARCHAR(255), horodatage VARCHAR(255), date VARCHAR(255))")
 mycursor.execute("CREATE TABLE IF NOT EXISTS capteur1 (id INT AUTO_INCREMENT PRIMARY KEY, temperature VARCHAR(255), horodatage VARCHAR(255), date VARCHAR(255))")
 routes_capteurs = glob.glob("/sys/bus/w1/devices/28*/w1_slave")
 horodatage = datetime.now()
