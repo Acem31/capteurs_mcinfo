@@ -1,5 +1,5 @@
 <?php
-	shell_exec("sudo python ./python/reset.py");
+	shell_exec("/usr/bin/python /var/www/html/python/reset.py");
 	header('Location: http://capteurs.local');
   	exit();
 		?>
