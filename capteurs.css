@@ -33,10 +33,6 @@ h2 {
 #menu li {
 	list-style-type: none ;
 }
-tr{
-	display: flex;
-	justify-content: space-around;
-}
 .zone {
 	padding: 1em;
 	display: flex;
@@ -56,6 +52,11 @@ tr{
 .capt p {
 	font-weight: bold;
 	font-size: 2em;
+}
+.capt tr{
+	display: flex;
+	justify-content: space-around;
+	padding: 0.8em;
 }
 #hygro {
 	display: flex;
