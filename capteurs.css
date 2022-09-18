@@ -42,14 +42,11 @@ table {
   border-style: solid;
   color: #1f618d;
 }
-table td, table th {
+table td {
   border-width: 1em;
   border-color: #d4d4d5;
   border-style: solid;
   padding: 1em;
-}
-table thead {
-  background-color: #ffcc00;
 }
 .zone {
 	padding: 1em;
