@@ -4,9 +4,9 @@ from datetime import datetime
 
 
 conn = mysql.connector.connect(
-		host='localhost',
-		user='couch_user',
-		password = "couchpass",
+		host='mysql_db',
+		user='root',
+		password = "couchpass31",
 		database='couch_DB',
 		)
 
