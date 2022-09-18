@@ -53,10 +53,12 @@ h2 {
 	font-weight: bold;
 	font-size: 2em;
 }
-.capt td{
+.capt tr{
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
+}
+.capt td{
 	padding: 0.2em;
 }
 #hygro {
