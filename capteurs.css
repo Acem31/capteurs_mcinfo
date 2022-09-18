@@ -33,7 +33,7 @@ h2 {
 #menu li {
 	list-style-type: none ;
 }
-table tr{
+tr{
 	display: flex;
 	justify-content: space-around;
 }
