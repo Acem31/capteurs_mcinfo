@@ -33,11 +33,12 @@ horodatage_day = horodatage.strftime("%x")
 if len(routes_capteurs) > 0 :
     contenu_fichier = lire_fichier(routes_capteurs[0])
     temperature = extraire_temperature(contenu_fichier)
+    roundtemp = round(temperature, 2)
     print ("Temperature :", temperature, "°")
     print ("Heure :", horodatage_strg)
     print ("Date :", horodatage_day)
     sql = "INSERT INTO capteur1 (temperature, horodatage, date) VALUES (%s, %s, %s)"
-    val = (temperature, horodatage_strg, horodatage_day)
+    val = (roundtemp, horodatage_strg, horodatage_day)
     mycursor.execute(sql, val)
     conn.commit()
 
