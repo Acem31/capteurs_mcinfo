@@ -33,6 +33,24 @@ h2 {
 #menu li {
 	list-style-type: none ;
 }
+table.GeneratedTable {
+  width: 100%;
+  background-color: #d4d4d5;
+  border-collapse: collapse;
+  border-width: 1em;
+  border-color: #d4d4d5;
+  border-style: solid;
+  color: #1f618d;
+}
+table.GeneratedTable td, table.GeneratedTable th {
+  border-width: 1em;
+  border-color: #d4d4d5;
+  border-style: solid;
+  padding: 1em;
+}
+table.GeneratedTable thead {
+  background-color: #ffcc00;
+}
 .zone {
 	padding: 1em;
 	display: flex;
