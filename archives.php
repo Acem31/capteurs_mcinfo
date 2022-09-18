@@ -29,7 +29,7 @@
 				$resultat = mysqli_query($mysqli, $requete);
 
 				while ($ligne = $resultat->fetch_assoc()) {
-					printf("<tr><td>%s</td><td>%s</td><td>%s</td></tr><br>", $ligne["temperature"], $ligne["horodatage"], $ligne["date"]);
+					printf("<tr><td>%s</td><td>%s</td><td>%s</td></tr>", $ligne["temperature"], $ligne["horodatage"], $ligne["date"]);
 				}
 			?>
 			</table>
