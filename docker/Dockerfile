@@ -6,7 +6,7 @@ RUN apt-get update; \
 		wget \
 		unzip \
 		python3.9\
-		python3-pip
+		python3-pip \
 	; \
 	a2enmod rewrite;\
 	/etc/init.d/apache2 restart;\
