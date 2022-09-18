@@ -1,5 +1,6 @@
 <?php
-	exec("/usr/bin/python /var/www/html/python/reset.py");
+	$commande = escapeshellcmd ('python /var/www/html/python/reset.py')
+	$output = shell_exec($commande)
 	header('Location: http://capteurs.local');
   	exit();
 		?>
