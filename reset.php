@@ -8,4 +8,6 @@
 
     
 	$mysqli->close();
+	header('Location: http://www.votresite.com/pageprotegee.php');
+  	exit();
 		?>
