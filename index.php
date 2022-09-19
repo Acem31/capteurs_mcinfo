@@ -31,20 +31,47 @@
     $ligne = mysqli_fetch_row($resultat);
     printf("%s" , $ligne[1]);
     
-		$mysqli->close();
+		/*$mysqli->close();*/
 		?>°</p>
         </div>
         <div class="capt">
           <h2>Capteur 2</h2>
-			<p>VALEUR%?°</p>
+			<p><?php
+				$requete = "SELECT * FROM capteur2 ORDER BY id DESC";
+    $resultat = mysqli_query($mysqli, $requete);
+
+    mysqli_data_seek($resultat, 0);
+    $ligne = mysqli_fetch_row($resultat);
+    printf("%s" , $ligne[1]);
+    
+		/*$mysqli->close();*/
+		?>°</p>
         </div>
         <div class="capt">
           <h2>Capteur 3</h2>
-			<p>VALEUR%?°</p>
+			<p><?php
+				$requete = "SELECT * FROM capteur3 ORDER BY id DESC";
+    $resultat = mysqli_query($mysqli, $requete);
+
+    mysqli_data_seek($resultat, 0);
+    $ligne = mysqli_fetch_row($resultat);
+    printf("%s" , $ligne[1]);
+    
+		/*$mysqli->close();*/
+		?>°</p>
         </div>
         <div class="capt">
           <h2>Capteur 4</h2>
-			<p>VALEUR%?°</p>
+			<p><?php
+				$requete = "SELECT * FROM capteur4 ORDER BY id DESC";
+    $resultat = mysqli_query($mysqli, $requete);
+
+    mysqli_data_seek($resultat, 0);
+    $ligne = mysqli_fetch_row($resultat);
+    printf("%s" , $ligne[1]);
+    
+		/*$mysqli->close();*/
+		?>°</p>
         </div>
       </div>
       <div class="zone">
