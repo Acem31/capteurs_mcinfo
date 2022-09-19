@@ -44,7 +44,7 @@ if len(routes_capteurs1) > 0 :
     print ("Heure :", horodatage_strg)
     print ("Date :", horodatage_day ,"\n")
     sql = "INSERT INTO capteur1 (temperature, horodatage, date) VALUES (%s, %s, %s)"
-    val = (temperature, horodatage_strg, horodatage_day)
+    val = (roundtemp, horodatage_strg, horodatage_day)
     mycursor.execute(sql, val)
     conn.commit()
 
@@ -56,7 +56,7 @@ if len(routes_capteurs2) > 0 :
     print ("Heure :", horodatage_strg)
     print ("Date :", horodatage_day ,"\n")
     sql = "INSERT INTO capteur2 (temperature, horodatage, date) VALUES (%s, %s, %s)"
-    val = (temperature, horodatage_strg, horodatage_day)
+    val = (roundtemp, horodatage_strg, horodatage_day)
     mycursor.execute(sql, val)
     conn.commit()
 
@@ -68,7 +68,7 @@ if len(routes_capteurs3) > 0 :
     print ("Heure :", horodatage_strg)
     print ("Date :", horodatage_day ,"\n")
     sql = "INSERT INTO capteur3 (temperature, horodatage, date) VALUES (%s, %s, %s)"
-    val = (temperature, horodatage_strg, horodatage_day)
+    val = (roundtemp, horodatage_strg, horodatage_day)
     mycursor.execute(sql, val)
     conn.commit()
 
@@ -80,6 +80,6 @@ if len(routes_capteurs4) > 0 :
     print ("Heure :", horodatage_strg)
     print ("Date :", horodatage_day ,"\n")
     sql = "INSERT INTO capteur4 (temperature, horodatage, date) VALUES (%s, %s, %s)"
-    val = (temperature, horodatage_strg, horodatage_day)
+    val = (roundtemp, horodatage_strg, horodatage_day)
     mycursor.execute(sql, val)
     conn.commit()
