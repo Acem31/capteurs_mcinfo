@@ -37,35 +37,35 @@
 			<div class="capt">
 				<h2>Capteur 2</h2>
 			<?php
-				$record["18:30"] = '23.5';
-				$record["18:00"] = '24';
-				$record["17:30"] = '24.5';
-				echo '<pre>';
-				print_r($record);
-				echo '</pre>';
-				?>
+				$requete = "SELECT * FROM capteur2 ORDER BY id DESC";
+				$resultat = mysqli_query($mysqli, $requete);
+
+				while ($ligne = $resultat->fetch_assoc()) {
+					printf("<tr><td>%s°</td><td>%s</td><td>%s</td></tr>", $ligne["temperature"], $ligne["horodatage"], $ligne["date"]);
+				}
+			?>
 		</div>
 			<div class="capt">
 				<h2>Capteur 3</h2>
 			<?php
-				$record["18:30"] = '23.5';
-				$record["18:00"] = '24';
-				$record["17:30"] = '24.5';
-				echo '<pre>';
-				print_r($record);
-				echo '</pre>';
-				?>
+				$requete = "SELECT * FROM capteur3 ORDER BY id DESC";
+				$resultat = mysqli_query($mysqli, $requete);
+
+				while ($ligne = $resultat->fetch_assoc()) {
+					printf("<tr><td>%s°</td><td>%s</td><td>%s</td></tr>", $ligne["temperature"], $ligne["horodatage"], $ligne["date"]);
+				}
+			?>
 		</div>
 			<div class="capt">
 				<h2>Capteur 4</h2>
 			<?php
-				$record["18:30"] = '23.5';
-				$record["18:00"] = '24';
-				$record["17:30"] = '24.5';
-				echo '<pre>';
-				print_r($record);
-				echo '</pre>';
-				?>
+				$requete = "SELECT * FROM capteur4 ORDER BY id DESC";
+				$resultat = mysqli_query($mysqli, $requete);
+
+				while ($ligne = $resultat->fetch_assoc()) {
+					printf("<tr><td>%s°</td><td>%s</td><td>%s</td></tr>", $ligne["temperature"], $ligne["horodatage"], $ligne["date"]);
+				}
+			?>
 		</div>
 			<div class="capt">
 				<h2>Hygrométrie</h2>
