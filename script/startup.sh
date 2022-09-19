@@ -3,6 +3,7 @@ apt update
 apt install -y install python3-pip
 curl -fsSL https://get.docker.com -o get-docker.sh
 sh get-docker.sh
+apt -y install ecryptfs-utils
 pip3 install docker-compose
 pip3 install mysql-connector-python
 usermod -aG docker capteurs
