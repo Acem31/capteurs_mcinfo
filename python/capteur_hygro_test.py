@@ -1,24 +1,27 @@
 import time
-import board
-import adafruit_dht
+import requests
+tfile='/sys/devices/platform/dht11@19/iio:device0/in_temp_input'
+hfile='/sys/devices/platform/dht11@19/iio:device0/in_humidityrelative_input'
 
-dhtDevice = adafruit_dht.DHT11(board.D25, use_pulseio=False)
+def read_temp_raw():
+   f=open(tfile,'r')
+   lines=float(f.read())/1000.0
+   f.close()
+   return lines
+
+def read_humidity_raw():
+   b=open(hfile,'r')
+   hlines=float(b.read())/1000
+   b.close()
+   return hlines
 
 while True:
-    try:
-        humidity = dhtDevice.humidity
-        print(
-            "Humidity: {}% ".format(
-                humidity
-            )
-        )
+   try:
+     T=str(read_temp_raw())
+     print(T)
+     H=str(read_humidity_raw())
+     print(H)
+     time.sleep(2)
 
-    except RuntimeError as error:
-        print(error.args[0])
-        time.sleep(2.0)
-        continue
-    except Exception as error:
-        dhtDevice.exit()
-        raise error
-
-    time.sleep(2.0)
+   except IOError:
+      print("I/O error")
