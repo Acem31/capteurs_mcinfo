@@ -81,7 +81,7 @@
 				$resultat = mysqli_query($mysqli, $requete);
 
 				while ($ligne = $resultat->fetch_assoc()) {
-					printf("<tr><td>%s%</td><td>%s</td><td>%s</td></tr>", $ligne["humidite"], $ligne["horodatage"], $ligne["date"]);
+					printf("<tr><td>%s %</td><td>%s</td><td>%s</td></tr>", $ligne["humidite"], $ligne["horodatage"], $ligne["date"]);
 				}
 				?>
 					</table>
