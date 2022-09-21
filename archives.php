@@ -77,12 +77,12 @@
 				<h2>Hygrométrie</h2>
 				<table>
 			<?php
-				$record["18:30"] = '80%';
-				$record["18:00"] = '82%';
-				$record["17:30"] = '84%';
-				echo '<pre>';
-				print_r($record);
-				echo '</pre>';
+				$requete = "SELECT * FROM hygro1 ORDER BY id DESC";
+				$resultat = mysqli_query($mysqli, $requete);
+
+				while ($ligne = $resultat->fetch_assoc()) {
+					printf("<tr><td>%s°</td><td>%s</td><td>%s</td></tr>", $ligne["humidite"], $ligne["horodatage"], $ligne["date"]);
+				}
 				?>
 					</table>
 		</div>
