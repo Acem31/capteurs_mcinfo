@@ -28,7 +28,7 @@ mycursor.execute("CREATE TABLE IF NOT EXISTS capteur1 (id INT AUTO_INCREMENT PRI
 mycursor.execute("CREATE TABLE IF NOT EXISTS capteur2 (id INT AUTO_INCREMENT PRIMARY KEY, temperature VARCHAR(255), horodatage VARCHAR(255), date VARCHAR(255))")
 mycursor.execute("CREATE TABLE IF NOT EXISTS capteur3 (id INT AUTO_INCREMENT PRIMARY KEY, temperature VARCHAR(255), horodatage VARCHAR(255), date VARCHAR(255))")
 mycursor.execute("CREATE TABLE IF NOT EXISTS capteur4 (id INT AUTO_INCREMENT PRIMARY KEY, temperature VARCHAR(255), horodatage VARCHAR(255), date VARCHAR(255))")
-mycursor.execute("CREATE TABLE IF NOT EXISTS hygro1 (id INT AUTO_INCREMENT PRIMARY KEY, humidité VARCHAR(255), horodatage VARCHAR(255), date VARCHAR(255))")
+mycursor.execute("CREATE TABLE IF NOT EXISTS hygro1 (id INT AUTO_INCREMENT PRIMARY KEY, humidite VARCHAR(255), horodatage VARCHAR(255), date VARCHAR(255))")
 routes_capteurs1 = glob.glob("/sys/bus/w1/devices/28-3c01f0957762/w1_slave")
 routes_capteurs2 = glob.glob("/sys/bus/w1/devices/28-3c01f0952eb5/w1_slave")
 routes_capteurs3 = glob.glob("/sys/bus/w1/devices/28-3c01f095702b/w1_slave")
@@ -48,7 +48,7 @@ if len(routes_capteurs1) > 0 :
     val = (roundtemp, horodatage_strg, horodatage_day)
     hum = 100-(roundtemp*2)
     mycursor.execute(sql, val)
-    sql2 = "INSERT INTO hygro1 (humidité, horodatage, date) VALUES (%s, %s, %s)"
+    sql2 = "INSERT INTO hygro1 (humidite, horodatage, date) VALUES (%s, %s, %s)"
     val2 = (hum, horodatage_strg, horodatage_day)
     mycursor.execute(sql2, val2)
     conn.commit()
