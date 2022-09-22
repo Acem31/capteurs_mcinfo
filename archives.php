@@ -12,7 +12,7 @@
       <div id="menu">
 		  <img src="img/Logo_MC_Informatique_blue.png" alt="Logo MC Informatique" align="left">
         <ul>
-			<li><a href="./archives.php" title="Archives des capteurs hygrométriques" target="_self">Archives-Hygro</a></li>
+			<li><a href="./archiveshum.php" title="Archives des capteurs hygrométriques" target="_self">Archives-Hygro</a></li>
           	<li><a href="./index.php" title="Valeurs en direct" target="_self">Direct</a></li>
           	<li><a href="./archives.php" title="Archives des capteurs de température" target="_self">Archives-Temp</a></li>
         </ul>
