@@ -95,6 +95,45 @@
 		/*$mysqli->close();*/
 		?></p>
         </div>
+		  <div id="hygro">
+          <h2>Hygrométrie</h2>
+			<p><?php
+				$requete = "SELECT * FROM hygro1 ORDER BY id DESC";
+    $resultat = mysqli_query($mysqli, $requete);
+
+    mysqli_data_seek($resultat, 0);
+    $ligne = mysqli_fetch_row($resultat);
+    printf("%s &#37;" , $ligne[1]);
+    
+		/*$mysqli->close();*/
+		?></p>
+        </div>
+		  <div id="hygro">
+          <h2>Hygrométrie</h2>
+			<p><?php
+				$requete = "SELECT * FROM hygro1 ORDER BY id DESC";
+    $resultat = mysqli_query($mysqli, $requete);
+
+    mysqli_data_seek($resultat, 0);
+    $ligne = mysqli_fetch_row($resultat);
+    printf("%s &#37;" , $ligne[1]);
+    
+		/*$mysqli->close();*/
+		?></p>
+        </div>
+		  <div id="hygro">
+          <h2>Hygrométrie</h2>
+			<p><?php
+				$requete = "SELECT * FROM hygro1 ORDER BY id DESC";
+    $resultat = mysqli_query($mysqli, $requete);
+
+    mysqli_data_seek($resultat, 0);
+    $ligne = mysqli_fetch_row($resultat);
+    printf("%s &#37;" , $ligne[1]);
+    
+		/*$mysqli->close();*/
+		?></p>
+        </div>
 		<div id="donnees">
         	<div id="reset">
           		<h2>Reset données</h2>
