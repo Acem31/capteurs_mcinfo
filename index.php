@@ -86,7 +86,7 @@
     printf("%s &#37;" , $ligne[1]);
     
 		/*$mysqli->close();*/
-		?>%</p>
+		?></p>
         </div>
 		<div id="donnees">
         	<div id="reset">
