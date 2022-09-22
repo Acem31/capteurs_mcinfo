@@ -7,7 +7,9 @@ RUN apt-get update; \
 		unzip \
 		python3.9\
 		python3-pip \
+		libgpiod2 \
 	; \
+	pip3 install adafruit-circuitpython-dht; \
 	a2enmod rewrite;\
 	/etc/init.d/apache2 restart;\
 	docker-php-ext-install mysqli; \
