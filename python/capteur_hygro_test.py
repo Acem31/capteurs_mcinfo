@@ -1,27 +1,10 @@
-import time
-import requests
-tfile='/sys/devices/platform/dht11@19/iio:device0/in_temp_input'
-hfile='/sys/devices/platform/dht11@19/iio:device0/in_humidityrelative_input'
+import sys
+import Adafruit_DHT
 
-def read_temp_raw():
-   f=open(tfile,'r')
-   lines=float(f.read())/1000.0
-   f.close()
-   return lines
+humidity, temperature = Adafruit_DHT.read_retry(Adafruit_DHT.DHT22, 25)
 
-def read_humidity_raw():
-   b=open(hfile,'r')
-   hlines=float(b.read())/1000
-   b.close()
-   return hlines
-
-while True:
-   try:
-     T=str(read_temp_raw())
-     print(T)
-     H=str(read_humidity_raw())
-     print(H)
-     time.sleep(2)
-
-   except IOError:
-      print("I/O error")
+if humidity is not None:
+    print('Humidity={1:0.1f}%'.format(humidity))
+else:
+    print('Failed to get reading. Try again!')
+    sys.exit(1)
