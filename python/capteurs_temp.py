@@ -1,4 +1,3 @@
-import sys
 import Adafruit_DHT
 import glob
 import mysql.connector
