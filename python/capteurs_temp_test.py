@@ -46,11 +46,7 @@ if len(routes_capteurs1) > 0 :
     print ("Date :", horodatage_day ,"\n")
     sql = "INSERT INTO capteur1 (temperature, horodatage, date) VALUES (%s, %s, %s)"
     val = (roundtemp, horodatage_strg, horodatage_day)
-    hum = 100-(roundtemp*2)
     mycursor.execute(sql, val)
-    sql2 = "INSERT INTO hygro1 (humidite, horodatage, date) VALUES (%s, %s, %s)"
-    val2 = (hum, horodatage_strg, horodatage_day)
-    mycursor.execute(sql2, val2)
     conn.commit()
 
 if len(routes_capteurs2) > 0 :
