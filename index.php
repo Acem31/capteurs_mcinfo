@@ -83,7 +83,7 @@
 
     mysqli_data_seek($resultat, 0);
     $ligne = mysqli_fetch_row($resultat);
-    printf("%s" , $ligne[1]);
+    printf("%s &#37;" , $ligne[1]);
     
 		/*$mysqli->close();*/
 		?>%</p>
