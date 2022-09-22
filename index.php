@@ -83,7 +83,7 @@
       </div>
       <div class="zone">
         <div id="hygro">
-          <h2>Hygrométrie</h2>
+          <h2>Hygrométrie 1</h2>
 			<p><?php
 				$requete = "SELECT * FROM hygro1 ORDER BY id DESC";
     $resultat = mysqli_query($mysqli, $requete);
@@ -96,7 +96,7 @@
 		?></p>
         </div>
 		  <div id="hygro">
-          <h2>Hygrométrie</h2>
+          <h2>Hygrométrie 2</h2>
 			<p><?php
 				$requete = "SELECT * FROM hygro1 ORDER BY id DESC";
     $resultat = mysqli_query($mysqli, $requete);
@@ -109,7 +109,7 @@
 		?></p>
         </div>
 		  <div id="hygro">
-          <h2>Hygrométrie</h2>
+          <h2>Hygrométrie 3</h2>
 			<p><?php
 				$requete = "SELECT * FROM hygro1 ORDER BY id DESC";
     $resultat = mysqli_query($mysqli, $requete);
@@ -122,7 +122,7 @@
 		?></p>
         </div>
 		  <div id="hygro">
-          <h2>Hygrométrie</h2>
+          <h2>Hygrométrie 4</h2>
 			<p><?php
 				$requete = "SELECT * FROM hygro1 ORDER BY id DESC";
     $resultat = mysqli_query($mysqli, $requete);
