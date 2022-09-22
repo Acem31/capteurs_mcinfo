@@ -18,6 +18,9 @@ services:
       #- /dev/gpiomem:/dev/gpiomem
       #- /dev/i2c-1:/dev/i2c-1
       #- /sys:/sys:/sys:/sys
+    devices:
+      - /dev/gpiomem
+      - /dev/i2c-1
     privileged: true
 
 
