@@ -40,9 +40,10 @@ h2 {
 	list-style-type: none ;
 }
 .zone {
-	padding: 1em;
 	display: flex;
 	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;
 }
 .capt {
 	display: flex;
