@@ -9,8 +9,7 @@ RUN apt-get update; \
 		python3-pip \
 		libgpiod2 \
 	; \
-	pip3 install adafruit-circuitpython-dht; \
-	pip3 install Adafruit_Python_DHT; \
+	pip install Adafruit-DHT;\
 	a2enmod rewrite;\
 	/etc/init.d/apache2 restart;\
 	docker-php-ext-install mysqli; \
