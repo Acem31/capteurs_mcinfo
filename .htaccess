@@ -2,5 +2,3 @@
 RewriteEngine on
 RewriteCond %{QUERY_STRING} ^$
 RewriteRule ^index\.php$ http://capteurs.local/? [R=301,L]
-RewriteRule archives archives.php
-RewriteRule archives-humidity archiveshum.php
