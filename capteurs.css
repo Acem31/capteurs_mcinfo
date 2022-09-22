@@ -33,7 +33,7 @@ h2 {
 	display: flex;
 	justify-content: space-around;
 	flex-direction: row;
-	flex-wrap: nowrap;
+	flex-wrap: wrap;
 	text-align: center;
 }
 #menu li {
