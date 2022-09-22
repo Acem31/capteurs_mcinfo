@@ -74,6 +74,12 @@
 		/*$mysqli->close();*/
 		?>°</p>
         </div>
+		  <div id="refresh">
+				<h2>Mise à jour</h2>
+				<form action="maj.php">
+				<input type="submit" class="bouton" value="Mise à jour" />
+				</form>
+			</div>
       </div>
       <div class="zone">
         <div id="hygro">
@@ -96,12 +102,6 @@
 				<input type="submit" class="bouton" value="Reset" />
 				</form>
         	</div>
-			<div id="refresh">
-				<h2>Mise à jour</h2>
-				<form action="maj.php">
-				<input type="submit" class="bouton" value="Mise à jour" />
-				</form>
-			</div>
 		</div>
       </div>
 	  <footer>
