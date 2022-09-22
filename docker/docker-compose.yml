@@ -15,9 +15,9 @@ services:
       - "/etc/timezone:/etc/timezone:ro"
       - "/etc/localtime:/etc/localtime:ro"
       - /dev/mem:/dev/mem  
-      - /dev/gpiomem:/dev/gpiomem
-      - /dev/i2c-1:/dev/i2c-1
-      - /sys:/sys:/sys:/sys
+      #- /dev/gpiomem:/dev/gpiomem
+      #- /dev/i2c-1:/dev/i2c-1
+      #- /sys:/sys:/sys:/sys
     privileged: true
 
 
