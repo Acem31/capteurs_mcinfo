@@ -27,6 +27,9 @@ def extraire_temperature (contenu) :
 mycursor = conn.cursor()
 
 humidity1, temperature = Adafruit_DHT.read_retry(Adafruit_DHT.DHT22, 25)
+humidity2, temperature = Adafruit_DHT.read_retry(Adafruit_DHT.DHT22, 25)
+humidity3, temperature = Adafruit_DHT.read_retry(Adafruit_DHT.DHT22, 25)
+humidity4, temperature = Adafruit_DHT.read_retry(Adafruit_DHT.DHT22, 25)
 
 mycursor.execute("CREATE TABLE IF NOT EXISTS capteur1 (id INT AUTO_INCREMENT PRIMARY KEY, temperature VARCHAR(255), horodatage VARCHAR(255), date VARCHAR(255))")
 mycursor.execute("CREATE TABLE IF NOT EXISTS capteur2 (id INT AUTO_INCREMENT PRIMARY KEY, temperature VARCHAR(255), horodatage VARCHAR(255), date VARCHAR(255))")
@@ -109,24 +112,24 @@ if humidity1 is not None:
    mycursor.execute(sql, val)
    conn.commit()
 
-if humidity1 is not None:
-   roundhum = round(humidity1, 2)
+if humidity2 is not None:
+   roundhum = round(humidity2, 2)
    print("Humidity=", roundhum,"%")
    sql = "INSERT INTO hygro2 (humidite, horodatage, date) VALUES (%s, %s, %s)"
    val = (roundhum, horodatage_strg, horodatage_day)
    mycursor.execute(sql, val)
    conn.commit()
 
-if humidity1 is not None:
-   roundhum = round(humidity1, 2)
+if humidity3 is not None:
+   roundhum = round(humidity3, 2)
    print("Humidity=", roundhum,"%")
    sql = "INSERT INTO hygro3 (humidite, horodatage, date) VALUES (%s, %s, %s)"
    val = (roundhum, horodatage_strg, horodatage_day)
    mycursor.execute(sql, val)
    conn.commit()
 
-if humidity1 is not None:
-   roundhum = round(humidity1, 2)
+if humidity4 is not None:
+   roundhum = round(humidity4, 2)
    print("Humidity=", roundhum,"%")
    sql = "INSERT INTO hygro4 (humidite, horodatage, date) VALUES (%s, %s, %s)"
    val = (roundhum, horodatage_strg, horodatage_day)
