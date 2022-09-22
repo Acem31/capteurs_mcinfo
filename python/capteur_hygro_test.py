@@ -8,3 +8,4 @@ if humidity is not None:
 else:
     print('Failed to get reading. Try again!')
     sys.exit(1)
+    
