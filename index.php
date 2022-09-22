@@ -6,14 +6,15 @@
     <link rel="stylesheet" href="capteurs.css">
 	<link rel="icon" href="favicon.ico" />
 </style><meta name="author" content="BLOT Aymeric">
-<meta http-equiv="refresh" content="1800">
+<meta http-equiv="refresh" content="900">
   </head>
   <body>
-    <div id="doc3" class="yui-t1">
       <div id="menu">
+		  <img src="img/Logo_MC_Informatique_blue.png" alt="Logo MC Informatique" align="left">
         <ul>
-          <li><a href="./index.php" title="Valeurs en direct" target="_self">Direct</a></li>
-          <li><a href="./archives.php" title="Archives des capteurs" target="_self">Archives</a></li>
+			<li><a href="./archives.php" title="Archives des capteurs hygrométriques" target="_self">Archives-Hygro</a></li>
+          	<li><a href="./index.php" title="Valeurs en direct" target="_self">Direct</a></li>
+          	<li><a href="./archives.php" title="Archives des capteurs de température" target="_self">Archives-Temp</a></li>
         </ul>
       </div>
       <div class="zone">
@@ -103,7 +104,6 @@
 			</div>
 		</div>
       </div>
-    </div>
 	  <footer>
 		  <center>
 			  <p>Copyright 
