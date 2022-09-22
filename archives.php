@@ -74,20 +74,6 @@
 			?>
 					</table>
 		</div>
-			<div class="capt">
-				<h2>Hygrométrie</h2>
-				<table>
-			<?php
-				$requete = "SELECT * FROM hygro1 ORDER BY id DESC";
-				$resultat = mysqli_query($mysqli, $requete);
-
-				while ($ligne = $resultat->fetch_assoc()) {
-					printf("<tr><td>%s &#37;</td><td>%s</td><td>%s</td></tr>", $ligne["humidite"], $ligne["horodatage"], $ligne["date"]);
-				}
-				?>
-					</table>
-		</div>
-			
 		</div>
 	<?php
 	$mysqli->close();
