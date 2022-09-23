@@ -137,7 +137,7 @@
 		<div id="donnees">
         	<div id="reset">
           		<h2>Reset données</h2>
-				<form action="reset.php">
+				<form action="./reset.php">
 				<input type="submit" class="bouton" value="Reset" />
 				</form>
         	</div>
