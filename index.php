@@ -76,7 +76,7 @@
         </div>
 		  <div id="refresh">
 				<h2>Mise à jour</h2>
-				<form action="maj.php">
+				<form action="./maj.php">
 				<input type="submit" class="bouton" value="Mise à jour" />
 				</form>
 			</div>
