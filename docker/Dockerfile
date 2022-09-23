@@ -22,6 +22,6 @@ RUN apt-get update; \
 	chown www-data:www-data /var/www/html/reset.php; \
 	chmod u+x /var/www/html/python/reset.py; \
 	chown www-data:www-data /var/www/html/maj.php; \
-	chmod u+x /var/www/html/python/maj.py;
+	chmod u+x /var/www/html/python/capteurs_temp.py;
 
 EXPOSE 80
