@@ -5,7 +5,7 @@ from datetime import datetime
 
 
 conn = mysql.connector.connect(
-		host='localhost',
+		host='mysql_db',
 		user='root',
 		password = "couchpass31",
 		database='couch_DB',
