@@ -50,9 +50,6 @@ if len(routes_capteurs1) > 0 :
     contenu_fichier = lire_fichier(routes_capteurs1[0])
     temperature = extraire_temperature(contenu_fichier)
     roundtemp = round(temperature, 2)
-    print ("Temperature :", roundtemp, "°")
-    print ("Heure :", horodatage_strg)
-    print ("Date :", horodatage_day ,"\n")
     sql = "INSERT INTO capteur1 (temperature, horodatage, date) VALUES (%s, %s, %s)"
     val = (roundtemp, horodatage_strg, horodatage_day)
     mycursor.execute(sql, val)
@@ -62,9 +59,6 @@ if len(routes_capteurs2) > 0 :
     contenu_fichier = lire_fichier(routes_capteurs1[0])
     temperature = extraire_temperature(contenu_fichier)
     roundtemp = round(temperature, 2)
-    print ("Temperature :", roundtemp, "°")
-    print ("Heure :", horodatage_strg)
-    print ("Date :", horodatage_day ,"\n")
     sql = "INSERT INTO capteur2 (temperature, horodatage, date) VALUES (%s, %s, %s)"
     val = (roundtemp, horodatage_strg, horodatage_day)
     mycursor.execute(sql, val)
@@ -74,9 +68,6 @@ if len(routes_capteurs3) > 0 :
     contenu_fichier = lire_fichier(routes_capteurs1[0])
     temperature = extraire_temperature(contenu_fichier)
     roundtemp = round(temperature, 2)
-    print ("Temperature :", roundtemp, "°")
-    print ("Heure :", horodatage_strg)
-    print ("Date :", horodatage_day ,"\n")
     sql = "INSERT INTO capteur3 (temperature, horodatage, date) VALUES (%s, %s, %s)"
     val = (roundtemp, horodatage_strg, horodatage_day)
     mycursor.execute(sql, val)
@@ -86,9 +77,6 @@ if len(routes_capteurs4) > 0 :
     contenu_fichier = lire_fichier(routes_capteurs1[0])
     temperature = extraire_temperature(contenu_fichier)
     roundtemp = round(temperature, 2)
-    print ("Temperature :", roundtemp, "°")
-    print ("Heure :", horodatage_strg)
-    print ("Date :", horodatage_day ,"\n")
     sql = "INSERT INTO capteur4 (temperature, horodatage, date) VALUES (%s, %s, %s)"
     val = (roundtemp, horodatage_strg, horodatage_day)
     mycursor.execute(sql, val)
@@ -96,7 +84,6 @@ if len(routes_capteurs4) > 0 :
 
 if humidity1 is not None:
    roundhum = round(humidity1, 2)
-   print("Humidity=", roundhum,"%")
    sql = "INSERT INTO hygro1 (humidite, horodatage, date) VALUES (%s, %s, %s)"
    val = (roundhum, horodatage_strg, horodatage_day)
    mycursor.execute(sql, val)
@@ -104,7 +91,6 @@ if humidity1 is not None:
 
 if humidity2 is not None:
    roundhum = round(humidity2, 2)
-   print("Humidity=", roundhum,"%")
    sql = "INSERT INTO hygro2 (humidite, horodatage, date) VALUES (%s, %s, %s)"
    val = (roundhum, horodatage_strg, horodatage_day)
    mycursor.execute(sql, val)
@@ -112,7 +98,6 @@ if humidity2 is not None:
 
 if humidity3 is not None:
    roundhum = round(humidity3, 2)
-   print("Humidity=", roundhum,"%")
    sql = "INSERT INTO hygro3 (humidite, horodatage, date) VALUES (%s, %s, %s)"
    val = (roundhum, horodatage_strg, horodatage_day)
    mycursor.execute(sql, val)
@@ -120,7 +105,6 @@ if humidity3 is not None:
 
 if humidity4 is not None:
    roundhum = round(humidity4, 2)
-   print("Humidity=", roundhum,"%")
    sql = "INSERT INTO hygro4 (humidite, horodatage, date) VALUES (%s, %s, %s)"
    val = (roundhum, horodatage_strg, horodatage_day)
    mycursor.execute(sql, val)
