@@ -3,6 +3,7 @@
 body {
 	margin: 0;
 	font-family: "Lucida Sans Typewriter","monospace";
+	min-height:100%;
 }
 h2 {
 	color: #1F618D;
@@ -152,6 +153,9 @@ input {
 }
 footer {
 	font-size: 0.7em;
+	position:absolute;
+	bottom:0;
+	width:100%;
 }
 footer a {
 	color: #001DFF;
