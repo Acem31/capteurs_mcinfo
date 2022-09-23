@@ -11,6 +11,7 @@ usermod -aG docker capteurs
 wget https://raw.githubusercontent.com/Acem31/capteurs_mcinfo/main/docker/Dockerfile
 wget https://raw.githubusercontent.com/Acem31/capteurs_mcinfo/main/docker/docker-compose.yml
 wget https://raw.githubusercontent.com/Acem31/capteurs_mcinfo/main/python/capteurs_temp_test.py
+wget https://raw.githubusercontent.com/Acem31/capteurs_mcinfo/main/python/capteur_hygro_test.py
 docker-compose up -d
 python capteurs_temp_test.py
 service ssh restart
