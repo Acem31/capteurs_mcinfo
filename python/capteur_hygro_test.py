@@ -21,7 +21,7 @@ horodatage = datetime.now()
 horodatage_strg = horodatage.strftime("%H:%M")
 horodatage_day = horodatage.strftime("%d-%m")
 
-if humidity1 is not None:
+if humidity1  > 0 :
    roundhum = round(humidity1, 2)
    print("Humidity=", roundhum,"%")
    sql = "INSERT INTO hygro1 (humidite, horodatage, date) VALUES (%s, %s, %s)"
@@ -29,7 +29,7 @@ if humidity1 is not None:
    mycursor.execute(sql, val)
    conn.commit()
 
-if humidity1 is not None:
+if humidity1  > 0 :
    roundhum = round(humidity1, 2)
    print("Humidity=", roundhum,"%")
    sql = "INSERT INTO hygro2 (humidite, horodatage, date) VALUES (%s, %s, %s)"
