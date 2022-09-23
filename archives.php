@@ -61,19 +61,6 @@
 			?>
 					</table>
 		</div>
-			<div class="capt">
-				<h2>Capteur 4</h2>
-				<table>
-			<?php
-				$requete = "SELECT * FROM capteur4 ORDER BY id DESC";
-				$resultat = mysqli_query($mysqli, $requete);
-
-				while ($ligne = $resultat->fetch_assoc()) {
-					printf("<tr><td>%s°</td><td>%s</td><td>%s</td></tr>", $ligne["temperature"], $ligne["horodatage"], $ligne["date"]);
-				}
-			?>
-					</table>
-		</div>
 		</div>
 	<?php
 	$mysqli->close();
