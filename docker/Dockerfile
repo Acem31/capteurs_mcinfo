@@ -20,6 +20,8 @@ RUN apt-get update; \
 	git clone https://github.com/Acem31/capteurs_mcinfo.git /var/www/html/ ; \
 	chmod 777 -R /var/www/html; \
 	chown www-data:www-data /var/www/html/reset.php; \
-	chmod u+x /var/www/html/python/reset.py;
+	chmod u+x /var/www/html/python/reset.py; \
+	chown www-data:www-data /var/www/html/maj.php; \
+	chmod u+x /var/www/html/python/maj.py;
 
 EXPOSE 80
