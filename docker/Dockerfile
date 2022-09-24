@@ -24,5 +24,6 @@ RUN apt-get update; \
 	chown www-data:www-data /var/www/html/ -R; \
 	/etc/init.d/apache2 restart; \
 	groupadd gpio; \
+	usermod -a -G gpio www-data;
 
 EXPOSE 80
