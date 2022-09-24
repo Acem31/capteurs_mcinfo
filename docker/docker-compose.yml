@@ -14,9 +14,9 @@ services:
     volumes:
       - "/etc/timezone:/etc/timezone:ro"
       - "/etc/localtime:/etc/localtime:ro"
-      - "/dev/gpiomem:/dev/gpiomem:ro"
-      - "/dev/i2c-1:/dev/i2c-1:ro"
-      - "/dev/mem:/dev/mem:ro"
+      - "/dev/gpiomem:/dev/gpiomem"
+      - "/dev/i2c-1:/dev/i2c-1"
+      - "/dev/mem:/dev/mem"
     #devices:
       #- /dev/gpiomem:/dev/gpiomem
       #- /dev/i2c-1:/dev/i2c-1
