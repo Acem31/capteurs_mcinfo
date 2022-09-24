@@ -241,4 +241,9 @@ footer a {
     box-shadow: 0em -3em 0 0, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0, -2em -2em 0 0.2em;
   }
 }
-
+#chargement	{
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	align-content: space-around;
+}
