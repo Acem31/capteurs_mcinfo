@@ -15,9 +15,10 @@ services:
       - "/etc/timezone:/etc/timezone:ro"
       - "/etc/localtime:/etc/localtime:ro"
       #- /dev/mem:/dev/mem
-    #devices:
-      #- /dev/gpiomem
-      #- /dev/i2c-1
+    devices:
+      - /dev/gpiomem
+      - /dev/i2c-1
+      - /dev/mem
     privileged: true
 
 
