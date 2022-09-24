@@ -14,5 +14,6 @@ wget https://raw.githubusercontent.com/Acem31/capteurs_mcinfo/main/python/capteu
 wget https://raw.githubusercontent.com/Acem31/capteurs_mcinfo/main/python/capteur_hygro_test.py
 docker-compose up -d
 python capteurs_temp_test.py
+python capteur_hygro_test.py
 service ssh restart
 reboot
