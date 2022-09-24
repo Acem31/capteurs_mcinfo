@@ -3,7 +3,10 @@
 body {
 	margin: 0;
 	font-family: "Lucida Sans Typewriter","monospace";
-	min-height:100%;
+	min-height:100vh;
+	display: flex;
+	flex-direction: column;
+	align-content: space-between;
 }
 h2 {
 	color: #1F618D;
@@ -153,9 +156,8 @@ input {
 }
 footer {
 	font-size: 0.7em;
-	position:absolute;
-	bottom:0;
 	width:100%;
+	align-self: flex-end;
 }
 footer a {
 	color: #001DFF;
