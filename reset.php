@@ -3,8 +3,6 @@
 	$commande = escapeshellcmd ("/usr/bin/python3.9 /var/www/html/python/reset.py");
 	$output = shell_exec($commande);
 	echo $output;
-	sleep(3);
-	header('Location: http://capteurs.local');
   	exit();
 ?>
 <html dir="ltr" lang="fr">
@@ -14,7 +12,7 @@
     <link rel="stylesheet" href="capteurs.css">
 	<link rel="icon" href="favicon.ico" />
 </style><meta name="author" content="BLOT Aymeric">
-<meta http-equiv="refresh" content="900">
+<meta http-equiv="refresh" content="3;URL='http://capteurs.local'">
 	</head>
 <body>
 	<div id='chargement'>
