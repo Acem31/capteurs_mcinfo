@@ -17,7 +17,8 @@
           	<li><a href="./archives.php" title="Archives des capteurs de température" target="_self">Archives-Temp</a></li>
         </ul>
       </div>
-      <div class="zone">
+	  <div id="main">
+	  <div class="zone">
         <div class="capt">
           <h2>Capteur 1</h2>
 			<p>	<?php
@@ -104,6 +105,7 @@
 			</div>
 		</div>
       </div>
+		</div>
 	  <footer>
 		  <center>
 			  <p>Copyright 
