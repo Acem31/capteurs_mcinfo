@@ -17,6 +17,7 @@
           	<li><a href="./archives.php" title="Archives des capteurs de température" target="_self">Archives-Temp</a></li>
         </ul>
       </div>
+	  <div id="main">
 		<div class="zone">
         <div class="capt">
 			<h2>Hygrométrie 1</h2>
@@ -52,6 +53,7 @@
 	<?php
 	$mysqli->close();
 	?>
+	  </div>
 	  <footer>
 		  <center>
 			  <p>Copyright 
