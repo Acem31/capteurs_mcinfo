@@ -16,9 +16,9 @@ services:
       - "/etc/localtime:/etc/localtime:ro"
       #- /dev/mem:/dev/mem
     devices:
-      - /dev/gpiomem
-      - /dev/i2c-1
-      - /dev/mem
+      - /dev/gpiomem:/dev/gpiomem
+      - /dev/i2c-1:/dev/i2c-1
+      - /dev/mem:/dev/mem
     privileged: true
 
 
