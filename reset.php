@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="capteurs.css">
 	<link rel="icon" href="favicon.ico" />
 </style><meta name="author" content="BLOT Aymeric">
-<!--<meta http-equiv="refresh" content="3;URL='http://capteurs.local'">-->
+<meta http-equiv="refresh" content="3;URL='http://capteurs.local'">
 	</head>
 <body>
 	<div id='chargement'>
