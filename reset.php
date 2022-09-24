@@ -15,8 +15,10 @@
 <!--<meta http-equiv="refresh" content="3;URL='http://capteurs.local'">-->
 	</head>
 <body>
+	<div id='chargement'>
 	<div class="loader">Loading...</div>
 	<p>Mise à jour des capteurs...</p>
+	</div>
 	<footer>
 		  <center>
 			  <p>Copyright 
