@@ -21,6 +21,7 @@ RUN apt-get update; \
 	chmod 777 -R /var/www/html; \
 	chmod +x /var/www/html/python/reset.py; \
 	chmod +x /var/www/html/python/capteurs_temp.py; \
-	chown www-data:www-data /var/www/html/ -R;
+	chown www-data:www-data /var/www/html/ -R; \
+	/etc/init.d/apache2 restart;
 
 EXPOSE 80
