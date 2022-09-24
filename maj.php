@@ -1,10 +1,4 @@
 <!DOCTYPE html>
-<?php
-	$commande = escapeshellcmd ("/usr/bin/python3.9 /var/www/html/python/capteurs_temp.py");
-	$output = shell_exec($commande);
-	echo $output;
-  	exit();
-		?>
 <html dir="ltr" lang="fr">
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
@@ -15,6 +9,12 @@
 <meta http-equiv="refresh" content="3;URL='http://capteurs.local'">
 	</head>
 <body>
+	<?php
+	$commande = escapeshellcmd ("/usr/bin/python3.9 /var/www/html/python/capteurs_temp.py");
+	$output = shell_exec($commande);
+	echo $output;
+  	exit();
+		?>
 	<div id='chargement'>
 	<div class="loader">Loading...</div>
 	<p>Mise à jour des capteurs...</p>
