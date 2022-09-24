@@ -1,3 +1,6 @@
+<?php
+include("exporter.php");
+?>
 <!DOCTYPE html>
 <html dir="ltr" lang="fr">
   <head>
