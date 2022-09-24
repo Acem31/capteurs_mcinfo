@@ -1,6 +1,3 @@
-<?php
-include("exporter.php");
-?>
 <!DOCTYPE html>
 <html dir="ltr" lang="fr">
   <head>
@@ -64,13 +61,6 @@ include("exporter.php");
 				}
 			?>
 					</table>
-		</div>
-			<div class="capt">
-				<h2>EXporter vers Excel</h2>
-				<form action="#" method="post">
-				<button type="submit" id="export" name="export"
- 				value="Export to excel" class="btn btn-success">Export To Excel</button>
-</form>
 		</div>
 		</div>
 	<?php
