@@ -2,3 +2,9 @@
 RewriteEngine on
 RewriteCond %{QUERY_STRING} ^$
 RewriteRule ^index\.php$ http://capteurs.local/? [R=301,L]
+
+RewriteCond %{QUERY_STRING} ^$
+RewriteRule ^archiveshum\.php$ http://capteurs.local/archiveshum? [R=301,L]
+
+RewriteCond %{QUERY_STRING} ^$
+RewriteRule ^archives\.php$ http://capteurs.local/archivestemp? [R=301,L]
