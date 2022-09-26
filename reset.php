@@ -8,11 +8,6 @@
 </style><meta name="author" content="BLOT Aymeric">
 	</head>
 <body>
-	<script>
-        var timer = setTimeout(function() {
-            window.location='./index.php'
-        }, 3000);
-    </script>
 	<?php
 	$commande = escapeshellcmd ("/usr/bin/python3.9 /var/www/html/python/reset.py");
 	$output = shell_exec($commande);
@@ -30,6 +25,11 @@
 <a href="https://www.mc-informatique.fr/" title="Site internet de MC Informatique à l'Union (31)">mc-informatique.fr</a>. Tous droits réservés.
 			  </p>
 		  </center>
+		<script>
+        var timer = setTimeout(function() {
+            window.location='./index.php'
+        }, 3000);
+    </script>
 	  </footer>
 </body>
 </html>
