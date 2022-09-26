@@ -15,7 +15,7 @@
   	exit();
 	?>
 	<div id='chargement'>
-	<div class="loader">Loading...</div>
+	<center><div class="loader"></div></center>
 	<p>Mise à jour des capteurs...</p>
 	</div>
 	<footer>
