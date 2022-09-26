@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="capteurs.css">
 	<link rel="icon" href="favicon.ico" />
 </style><meta name="author" content="BLOT Aymeric">
-<meta http-equiv="refresh" content="1800">
+<meta http-equiv="refresh" content="900">
   </head>
   <body>
       <div id="menu">
