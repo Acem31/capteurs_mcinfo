@@ -25,6 +25,11 @@
 <a href="https://www.mc-informatique.fr/" title="Site internet de MC Informatique à l'Union (31)">mc-informatique.fr</a>. Tous droits réservés.
 			  </p>
 		  </center>
+		<script>
+        var timer = setTimeout(function() {
+            window.location='./index.php'
+        }, 3000);
+    </script>
 	  </footer>
 </body>
 </html>
