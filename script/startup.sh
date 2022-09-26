@@ -10,10 +10,11 @@ wget https://raw.githubusercontent.com/Acem31/capteurs_mcinfo/main/docker/Docker
 wget https://raw.githubusercontent.com/Acem31/capteurs_mcinfo/main/docker/docker-compose.yml
 wget https://raw.githubusercontent.com/Acem31/capteurs_mcinfo/main/python/capteurs_temp_test.py
 wget https://raw.githubusercontent.com/Acem31/capteurs_mcinfo/main/python/capteur_hygro_test.py
+wget https://raw.githubusercontent.com/Acem31/capteurs_mcinfo/main/script/droits.sh
 docker-compose up -d
 python capteurs_temp_test.py
 python capteur_hygro_test.py
 docker exec -ti appache_www chown root.gpio /dev/gpiomem
-docker exec -ti appache_www chown chmod g+rw /dev/gpiomem
+docker exec -ti appache_www chmod g+rw /dev/gpiomem
 service ssh restart
 reboot
