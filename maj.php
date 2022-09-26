@@ -14,8 +14,8 @@
 	echo $output;
   	exit();
 		?>
-	<div id='chargement'>
-	<div class="loader">Loading...</div>
+		<div id='chargement'>
+	<center><div class="loader"></div></center>
 	<p>Mise à jour des capteurs...</p>
 	</div>
 	<footer>
