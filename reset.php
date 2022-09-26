@@ -8,6 +8,22 @@
 </style><meta name="author" content="BLOT Aymeric">
 	</head>
 <body>
+	<script type="text/javascript">
+		var count = 3;
+		var redirect = "./index.php";
+ 
+		function countDown(){
+    	var timer = document.getElementById("timer");
+    	if(count > 0){
+        	count--;
+        	timer.innerHTML = "Fin de mise à jour des capteurs dans "+count+" secondes.";
+        	setTimeout("countDown()", 3000);
+    	}else{
+        	window.location.href = redirect;
+    	}
+		}
+</script>
+
 	<?php
 	$commande = escapeshellcmd ("/usr/bin/python3.9 /var/www/html/python/reset.py");
 	$output = shell_exec($commande);
@@ -16,7 +32,8 @@
 	?>
 	<div id='chargement'>
 	<div class="loader">Loading...</div>
-	<p>Mise à jour des capteurs...</p>
+	<p>
+	<script type="text/javascript">countDown();</script></p>
 	</div>
 	<footer>
 		  <center>
