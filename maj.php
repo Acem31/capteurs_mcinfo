@@ -8,12 +8,6 @@
 </style><meta name="author" content="BLOT Aymeric">
 	</head>
 <body>
-	<?php
-	$commande = escapeshellcmd ("/usr/bin/python3.9 /var/www/html/python/capteurs_temp.py");
-	$output = shell_exec($commande);
-	echo $output;
-  	exit();
-		?>
 		<div id='chargement'>
 	<center><div class="loader"></div></center>
 	<p>Mise à jour des capteurs...</p>
@@ -32,4 +26,10 @@
     </script>
 	  </footer>
 </body>
+	<?php
+	$commande = escapeshellcmd ("/usr/bin/python3.9 /var/www/html/python/capteurs_temp.py");
+	$output = shell_exec($commande);
+	echo $output;
+  	exit();
+		?>
 </html>
