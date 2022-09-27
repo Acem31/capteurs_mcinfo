@@ -93,15 +93,11 @@
 		<div id="donnees">
         	<div id="reset">
           		<h2>Reset données</h2>
-				<form action="./reset.php">
-				<input type="submit" class="bouton" value="Reset" />
-				</form>
+				<a href="./reset.php" title="Reset" target="_self">Reset</a>
         	</div>
         	<div id="refresh">
 				<h2>Mise à jour</h2>
-				<form action="./maj.php">
-				<input type="submit" class="bouton" value="Mise à jour" />
-				</form>
+				<a href="./maj.php" title="Mise à jour" target="_self">Mise à jour</a>
 			</div>
 		</div>
       </div>
