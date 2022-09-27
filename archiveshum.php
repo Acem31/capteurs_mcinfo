@@ -4,6 +4,7 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <title>Archives des capteurs</title>
     <link rel="stylesheet" href="capteurs.css" media="screen">
+    <link rel="stylesheet" href="print.css" media="print">
 	<link rel="icon" href="favicon.ico" />
 	<meta name="author" content="BLOT Aymeric">
 <meta http-equiv="refresh" content="900">
