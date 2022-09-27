@@ -10,4 +10,6 @@
 }
 tr 	{
 	display: flex;
+	justify-content: space-around;
+	align-items: stretch;
 }
