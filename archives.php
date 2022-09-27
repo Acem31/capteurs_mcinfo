@@ -3,9 +3,9 @@
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <title>Archives des capteurs</title>
-    <link rel="stylesheet" href="capteurs.css">
+    <link rel="stylesheet" href="capteurs.css" media="screen">
 	<link rel="icon" href="favicon.ico" />
-</style><meta name="author" content="BLOT Aymeric">
+	<meta name="author" content="BLOT Aymeric">
 <meta http-equiv="refresh" content="900">
   </head>
   <body>
