@@ -179,7 +179,7 @@ footer a {
   background:
    linear-gradient(#85C1E9 0 0) 0/0% no-repeat
    #ddd;
-  animation:p1 3s infinite linear;
+  animation:p1 3.5s infinite linear;
 }
 @keyframes p1 {
     100% {background-size:100%}
