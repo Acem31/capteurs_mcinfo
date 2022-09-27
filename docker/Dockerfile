@@ -22,7 +22,6 @@ RUN apt-get update; \
 	chmod +x /var/www/html/python/reset.py; \
 	chmod +x /var/www/html/python/capteurs_temp.py; \
 	chown www-data:www-data /var/www/html/ -R; \
-	/etc/init.d/apache2 restart; \
 	groupadd gpio; \
 	usermod -a -G gpio www-data;
 
