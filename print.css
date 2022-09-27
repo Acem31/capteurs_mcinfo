@@ -10,10 +10,12 @@
 }
 tr 	{
 	display: flex;
+	flex-direction: row;
 	flex-wrap: nowrap;
 	justify-content: space-around;
 	align-items: stretch;
 }
 td 	{
-	padding: 5%;
+	padding-right: 0.5em;
+	padding-left: 0.5em;
 }
