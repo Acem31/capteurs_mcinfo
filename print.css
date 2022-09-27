@@ -13,3 +13,6 @@ tr 	{
 	justify-content: space-around;
 	align-items: stretch;
 }
+td 	{
+	padding: 5%;
+}
