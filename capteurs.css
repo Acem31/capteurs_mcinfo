@@ -108,21 +108,22 @@ h2 {
 	justify-content: center;
 	padding: 2%;
 }
-#refresh h2 , input {
+#refresh h2 , a {
 	padding-bottom: 6%;
 	padding-top: 6%;
 	text-align: center;
 }
-#refresh input {
-	border-color: blue;
+#refresh a {
+	text-decoration: none;
+	border: 2px solid blue;
 	background-color: gray;
 	color: white;
 	font-size: 1em;
 	font-weight: bold;
 	border-radius: 6px;
 }
-#refresh input:hover {
-	border-color: gray;
+#refresh a:hover {
+	border: 2px solid gray;
 	background-color: blue;
 	color: white;
 	font-size: 1em;
@@ -138,21 +139,22 @@ h2 {
 #reset h2 {
 	color: red;
 }
-#reset h2 , input {
+#reset h2 , a {
 	padding-bottom: 6%;
 	padding-top: 6%;
 	text-align: center;
 }
-#reset input {
-	border-color: red;
+#reset a {
+	text-decoration: none;
+	border: 2px solid red;
 	background-color: gray;
 	color: white;
 	font-size: 1em;
 	font-weight: bold;
 	border-radius: 6px;
 }
-#reset input:hover {
-	border-color: gray;
+#reset a:hover {
+	border: 2px solid gray;
 	background-color: red;
 	color: white;
 	font-size: 1em;
