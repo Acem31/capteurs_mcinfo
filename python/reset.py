@@ -98,28 +98,41 @@ else :
     mycursor.execute(sql, val)
     conn.commit()
 
-if humidity1  > 0 :
-   roundhum = round(humidity1, 2)
-   print("Humidity=", roundhum,"%")
-   sql = "INSERT INTO hygro1 (humidite, horodatage, date) VALUES (%s, %s, %s)"
-   val = (roundhum, horodatage_strg, horodatage_day)
-   mycursor.execute(sql, val)
-   conn.commit()
-else :
-    sql = "INSERT INTO hygro1 (humidite, horodatage, date) VALUES (%s, %s, %s)"
-    val = (0, horodatage_strg, horodatage_day)
-    mycursor.execute(sql, val)
-    conn.commit()
+if humidity1 == None :
+      sql = "INSERT INTO hygro1 (humidite, horodatage, date) VALUES (%s, %s, %s)"
+      val = (0, horodatage_strg, horodatage_day)
+      mycursor.execute(sql, val)
+      conn.commit()
+else:
+   if humidity1  > 0 :
+      roundhum = round(humidity1, 2)
+      print("Humidity=", roundhum,"%")
+      sql = "INSERT INTO hygro1 (humidite, horodatage, date) VALUES (%s, %s, %s)"
+      val = (roundhum, horodatage_strg, horodatage_day)
+      mycursor.execute(sql, val)
+      conn.commit()
+   else :
+      sql = "INSERT INTO hygro1 (humidite, horodatage, date) VALUES (%s, %s, %s)"
+      val = (0, horodatage_strg, horodatage_day)
+      mycursor.execute(sql, val)
+      conn.commit()
 
-if humidity1  > 0 :
-   roundhum = round(humidity1, 2)
-   print("Humidity=", roundhum,"%")
-   sql = "INSERT INTO hygro2 (humidite, horodatage, date) VALUES (%s, %s, %s)"
-   val = (roundhum, horodatage_strg, horodatage_day)
-   mycursor.execute(sql, val)
-   conn.commit()
-else :
-    sql = "INSERT INTO hygro2 (humidite, horodatage, date) VALUES (%s, %s, %s)"
-    val = (0, horodatage_strg, horodatage_day)
-    mycursor.execute(sql, val)
-    conn.commit()
+
+if humidity2 == None :
+      sql = "INSERT INTO hygro2 (humidite, horodatage, date) VALUES (%s, %s, %s)"
+      val = (0, horodatage_strg, horodatage_day)
+      mycursor.execute(sql, val)
+      conn.commit()
+else:
+   if humidity2  > 0 :
+      roundhum = round(humidity2, 2)
+      print("Humidity=", roundhum,"%")
+      sql = "INSERT INTO hygro2 (humidite, horodatage, date) VALUES (%s, %s, %s)"
+      val = (roundhum, horodatage_strg, horodatage_day)
+      mycursor.execute(sql, val)
+      conn.commit()
+   else :
+      sql = "INSERT INTO hygro2 (humidite, horodatage, date) VALUES (%s, %s, %s)"
+      val = (0, horodatage_strg, horodatage_day)
+      mycursor.execute(sql, val)
+      conn.commit()
