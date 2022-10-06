@@ -45,6 +45,11 @@ if len(routes_capteurs1) > 0 :
     val = (roundtemp, horodatage_strg, horodatage_day)
     mycursor.execute(sql, val)
     conn.commit()
+else :
+    sql = "INSERT INTO capteur1 (temperature, horodatage, date) VALUES (%s, %s, %s)"
+    val = (0, horodatage_strg, horodatage_day)
+    mycursor.execute(sql, val)
+    conn.commit()
 
 if len(routes_capteurs2) > 0 :
     contenu_fichier = lire_fichier(routes_capteurs1[0])
@@ -57,6 +62,11 @@ if len(routes_capteurs2) > 0 :
     val = (roundtemp, horodatage_strg, horodatage_day)
     mycursor.execute(sql, val)
     conn.commit()
+else :
+    sql = "INSERT INTO capteur2 (temperature, horodatage, date) VALUES (%s, %s, %s)"
+    val = (0, horodatage_strg, horodatage_day)
+    mycursor.execute(sql, val)
+    conn.commit()
 
 if len(routes_capteurs3) > 0 :
     contenu_fichier = lire_fichier(routes_capteurs1[0])
@@ -67,5 +77,10 @@ if len(routes_capteurs3) > 0 :
     print ("Date :", horodatage_day ,"\n")
     sql = "INSERT INTO capteur3 (temperature, horodatage, date) VALUES (%s, %s, %s)"
     val = (roundtemp, horodatage_strg, horodatage_day)
+    mycursor.execute(sql, val)
+    conn.commit()
+else :
+    sql = "INSERT INTO capteur3 (temperature, horodatage, date) VALUES (%s, %s, %s)"
+    val = (0, horodatage_strg, horodatage_day)
     mycursor.execute(sql, val)
     conn.commit()
