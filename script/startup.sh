@@ -1,9 +1,6 @@
 #!/bin/bash
 apt update
-apt install -y install python3-pip
-curl -fsSL https://get.docker.com -o get-docker.sh
-sh get-docker.sh
-pip3 install docker-compose
+apt install -y install docker docker-compose python3-pip
 pip3 install mysql-connector-python
 usermod -aG docker capteurs
 wget https://raw.githubusercontent.com/Acem31/capteurs_mcinfo/main/docker/Dockerfile
