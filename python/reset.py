@@ -25,8 +25,8 @@ def extraire_temperature (contenu) :
 
 mycursor = conn.cursor()
 
-humidity1, temperature = Adafruit_DHT.read_retry(Adafruit_DHT.DHT22, 4)
-humidity2, temperature = Adafruit_DHT.read_retry(Adafruit_DHT.DHT22, 25)
+humidity1, temperature = Adafruit_DHT.read_retry(Adafruit_DHT.DHT22, 5)
+humidity2, temperature = Adafruit_DHT.read_retry(Adafruit_DHT.DHT22, 13)
 
 mycursor.execute("CREATE TABLE IF NOT EXISTS capteur1 (id INT AUTO_INCREMENT PRIMARY KEY, temperature VARCHAR(255), horodatage VARCHAR(255), date VARCHAR(255))")
 mycursor.execute("CREATE TABLE IF NOT EXISTS capteur2 (id INT AUTO_INCREMENT PRIMARY KEY, temperature VARCHAR(255), horodatage VARCHAR(255), date VARCHAR(255))")
