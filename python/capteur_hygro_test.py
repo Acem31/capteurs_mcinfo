@@ -13,8 +13,8 @@ conn = mysql.connector.connect(
 
 mycursor = conn.cursor()
 
-humidity1, temperature = Adafruit_DHT.read_retry(Adafruit_DHT.DHT22, 5)
-humidity2, temperature = Adafruit_DHT.read_retry(Adafruit_DHT.DHT22, 13)
+humidity1, temperature = Adafruit_DHT.read_retry(Adafruit_DHT.DHT22, 6)
+humidity2, temperature = Adafruit_DHT.read_retry(Adafruit_DHT.DHT22, 19)
 
 mycursor.execute("CREATE TABLE IF NOT EXISTS hygro1 (id INT AUTO_INCREMENT PRIMARY KEY, humidite VARCHAR(255), horodatage VARCHAR(255), date VARCHAR(255))")
 mycursor.execute("CREATE TABLE IF NOT EXISTS hygro2 (id INT AUTO_INCREMENT PRIMARY KEY, humidite VARCHAR(255), horodatage VARCHAR(255), date VARCHAR(255))")
