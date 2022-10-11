@@ -11,6 +11,7 @@ services:
     container_name: appache_www
     ports:
       - "80:80"
+    command: /bin/sh -c "droits.sh"
     volumes:
       - "/etc/timezone:/etc/timezone:ro"
       - "/etc/localtime:/etc/localtime:ro"
