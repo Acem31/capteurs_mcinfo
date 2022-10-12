@@ -23,6 +23,7 @@ horodatage_strg = horodatage.strftime("%H:%M")
 horodatage_day = horodatage.strftime("%d-%m")
 
 if humidity1 == None :
+      print ("Humidité :", 0, "%")
       sql = "INSERT INTO hygro1 (humidite, horodatage, date) VALUES (%s, %s, %s)"
       val = (0, horodatage_strg, horodatage_day)
       mycursor.execute(sql, val)
@@ -43,6 +44,7 @@ else:
 
 
 if humidity2 == None :
+      print ("Humidité :", 0, "%")
       sql = "INSERT INTO hygro2 (humidite, horodatage, date) VALUES (%s, %s, %s)"
       val = (0, horodatage_strg, horodatage_day)
       mycursor.execute(sql, val)
