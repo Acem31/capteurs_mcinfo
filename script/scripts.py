@@ -1,3 +1,3 @@
 import subprocess
 
-subprocess.run(["/home/capteurs/droits.sh")
+subprocess.run(["/home/capteurs/droits.sh"])
