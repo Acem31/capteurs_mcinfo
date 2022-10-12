@@ -10,6 +10,7 @@ wget https://raw.githubusercontent.com/Acem31/capteurs_mcinfo/main/docker/docker
 wget https://raw.githubusercontent.com/Acem31/capteurs_mcinfo/main/python/capteurs_temp_test.py
 wget https://raw.githubusercontent.com/Acem31/capteurs_mcinfo/main/python/capteur_hygro_test.py
 wget https://raw.githubusercontent.com/Acem31/capteurs_mcinfo/main/script/droits.sh
+chmod +x /home/capteurs/droits.sh
 docker-compose up -d
 python capteurs_temp_test.py
 python capteur_hygro_test.py
