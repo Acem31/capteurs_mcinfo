@@ -1,6 +1,7 @@
 import sys
-import Adafruit_DHT
+import adafruit_dht
 import glob
+import board
 import mysql.connector
 from datetime import datetime
 import time
@@ -22,7 +23,8 @@ horodatage = datetime.now()
 horodatage_strg = horodatage.strftime("%H:%M")
 horodatage_day = horodatage.strftime("%d-%m")
 
-humidity1, temperature = Adafruit_DHT.read_retry(Adafruit_DHT.DHT22, 19)
+dht1 = adafruit_dht.DHT22(19)
+humidity1 = dht1.humidity
 
 if humidity1 == None :
       print ("Humidité :", 0, "%")
@@ -44,8 +46,8 @@ else:
       mycursor.execute(sql, val)
       conn.commit()
 
-
-humidity2, temperature = Adafruit_DHT.read_retry(Adafruit_DHT.DHT22, 6)
+dht2 = adafruit_dht.DHT22(6)
+humidity2 = dht2.humidity
 
 if humidity2 == None :
       print ("Humidité :", 0, "%")
