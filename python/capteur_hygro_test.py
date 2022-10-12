@@ -3,6 +3,8 @@ import Adafruit_DHT
 import glob
 import mysql.connector
 from datetime import datetime
+import time
+
 
 conn = mysql.connector.connect(
 		host='localhost',
@@ -13,14 +15,16 @@ conn = mysql.connector.connect(
 
 mycursor = conn.cursor()
 
-humidity1, temperature = Adafruit_DHT.read_retry(Adafruit_DHT.DHT22, 19)
-humidity2, temperature = Adafruit_DHT.read_retry(Adafruit_DHT.DHT22, 6)
 
 mycursor.execute("CREATE TABLE IF NOT EXISTS hygro1 (id INT AUTO_INCREMENT PRIMARY KEY, humidite VARCHAR(255), horodatage VARCHAR(255), date VARCHAR(255))")
 mycursor.execute("CREATE TABLE IF NOT EXISTS hygro2 (id INT AUTO_INCREMENT PRIMARY KEY, humidite VARCHAR(255), horodatage VARCHAR(255), date VARCHAR(255))")
 horodatage = datetime.now()
 horodatage_strg = horodatage.strftime("%H:%M")
 horodatage_day = horodatage.strftime("%d-%m")
+
+humidity1, temperature = Adafruit_DHT.read_retry(Adafruit_DHT.DHT22, 19)
+time.sleep(3)
+humidity2, temperature = Adafruit_DHT.read_retry(Adafruit_DHT.DHT22, 6)
 
 if humidity1 == None :
       print ("Humidité :", 0, "%")
