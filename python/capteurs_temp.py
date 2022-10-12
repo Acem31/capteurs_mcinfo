@@ -27,7 +27,6 @@ mycursor = conn.cursor()
 
 humidity1, temperature = Adafruit_DHT.read_retry(Adafruit_DHT.DHT22, 25)
 humidity2, temperature = Adafruit_DHT.read_retry(Adafruit_DHT.DHT22, 25)
-humidity3, temperature = Adafruit_DHT.read_retry(Adafruit_DHT.DHT22, 25)
 
 mycursor.execute("CREATE TABLE IF NOT EXISTS capteur1 (id INT AUTO_INCREMENT PRIMARY KEY, temperature VARCHAR(255), horodatage VARCHAR(255), date VARCHAR(255))")
 mycursor.execute("CREATE TABLE IF NOT EXISTS capteur2 (id INT AUTO_INCREMENT PRIMARY KEY, temperature VARCHAR(255), horodatage VARCHAR(255), date VARCHAR(255))")
@@ -45,8 +44,16 @@ if len(routes_capteurs1) > 0 :
     contenu_fichier = lire_fichier(routes_capteurs1[0])
     temperature = extraire_temperature(contenu_fichier)
     roundtemp = round(temperature, 2)
+    print ("Temperature :", roundtemp, "°")
+    print ("Heure :", horodatage_strg)
+    print ("Date :", horodatage_day ,"\n")
     sql = "INSERT INTO capteur1 (temperature, horodatage, date) VALUES (%s, %s, %s)"
     val = (roundtemp, horodatage_strg, horodatage_day)
+    mycursor.execute(sql, val)
+    conn.commit()
+else :
+    sql = "INSERT INTO capteur1 (temperature, horodatage, date) VALUES (%s, %s, %s)"
+    val = (0, horodatage_strg, horodatage_day)
     mycursor.execute(sql, val)
     conn.commit()
 
@@ -54,8 +61,16 @@ if len(routes_capteurs2) > 0 :
     contenu_fichier = lire_fichier(routes_capteurs1[0])
     temperature = extraire_temperature(contenu_fichier)
     roundtemp = round(temperature, 2)
+    print ("Temperature :", roundtemp, "°")
+    print ("Heure :", horodatage_strg)
+    print ("Date :", horodatage_day ,"\n")
     sql = "INSERT INTO capteur2 (temperature, horodatage, date) VALUES (%s, %s, %s)"
     val = (roundtemp, horodatage_strg, horodatage_day)
+    mycursor.execute(sql, val)
+    conn.commit()
+else :
+    sql = "INSERT INTO capteur2 (temperature, horodatage, date) VALUES (%s, %s, %s)"
+    val = (0, horodatage_strg, horodatage_day)
     mycursor.execute(sql, val)
     conn.commit()
 
@@ -63,21 +78,54 @@ if len(routes_capteurs3) > 0 :
     contenu_fichier = lire_fichier(routes_capteurs1[0])
     temperature = extraire_temperature(contenu_fichier)
     roundtemp = round(temperature, 2)
+    print ("Temperature :", roundtemp, "°")
+    print ("Heure :", horodatage_strg)
+    print ("Date :", horodatage_day ,"\n")
     sql = "INSERT INTO capteur3 (temperature, horodatage, date) VALUES (%s, %s, %s)"
     val = (roundtemp, horodatage_strg, horodatage_day)
     mycursor.execute(sql, val)
     conn.commit()
+else :
+    sql = "INSERT INTO capteur3 (temperature, horodatage, date) VALUES (%s, %s, %s)"
+    val = (0, horodatage_strg, horodatage_day)
+    mycursor.execute(sql, val)
+    conn.commit()
 
-if humidity1 is not None:
-   roundhum = round(humidity1, 2)
-   sql = "INSERT INTO hygro1 (humidite, horodatage, date) VALUES (%s, %s, %s)"
-   val = (roundhum, horodatage_strg, horodatage_day)
-   mycursor.execute(sql, val)
-   conn.commit()
+if humidity1 == None :
+      sql = "INSERT INTO hygro1 (humidite, horodatage, date) VALUES (%s, %s, %s)"
+      val = (0, horodatage_strg, horodatage_day)
+      mycursor.execute(sql, val)
+      conn.commit()
+else:
+   if humidity1  > 0 :
+      roundhum = round(humidity1, 2)
+      print("Humidity=", roundhum,"%")
+      sql = "INSERT INTO hygro1 (humidite, horodatage, date) VALUES (%s, %s, %s)"
+      val = (roundhum, horodatage_strg, horodatage_day)
+      mycursor.execute(sql, val)
+      conn.commit()
+   else :
+      sql = "INSERT INTO hygro1 (humidite, horodatage, date) VALUES (%s, %s, %s)"
+      val = (0, horodatage_strg, horodatage_day)
+      mycursor.execute(sql, val)
+      conn.commit()
 
-if humidity2 is not None:
-   roundhum = round(humidity2, 2)
-   sql = "INSERT INTO hygro2 (humidite, horodatage, date) VALUES (%s, %s, %s)"
-   val = (roundhum, horodatage_strg, horodatage_day)
-   mycursor.execute(sql, val)
-   conn.commit()
+
+if humidity2 == None :
+      sql = "INSERT INTO hygro2 (humidite, horodatage, date) VALUES (%s, %s, %s)"
+      val = (0, horodatage_strg, horodatage_day)
+      mycursor.execute(sql, val)
+      conn.commit()
+else:
+   if humidity2  > 0 :
+      roundhum = round(humidity2, 2)
+      print("Humidity=", roundhum,"%")
+      sql = "INSERT INTO hygro2 (humidite, horodatage, date) VALUES (%s, %s, %s)"
+      val = (roundhum, horodatage_strg, horodatage_day)
+      mycursor.execute(sql, val)
+      conn.commit()
+   else :
+      sql = "INSERT INTO hygro2 (humidite, horodatage, date) VALUES (%s, %s, %s)"
+      val = (0, horodatage_strg, horodatage_day)
+      mycursor.execute(sql, val)
+      conn.commit()
