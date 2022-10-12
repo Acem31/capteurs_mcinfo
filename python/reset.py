@@ -99,7 +99,7 @@ else :
     mycursor.execute(sql, val)
     conn.commit()
 
-dht1 = adafruit_dht.DHT22(19)
+dht1 = adafruit_dht.DHT22(board.D19)
 humidity1 = dht1.humidity
 
 if humidity1 == None :
@@ -122,7 +122,7 @@ else:
       mycursor.execute(sql, val)
       conn.commit()
 
-dht2 = adafruit_dht.DHT22(6)
+dht2 = adafruit_dht.DHT22(board.D6)
 humidity2 = dht2.humidity
 
 if humidity2 == None :
