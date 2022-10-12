@@ -41,7 +41,7 @@
 				<h2>Hygrométrie 2</h2>
 				<table>
 			<?php
-				$requete = "SELECT * FROM hygro1 ORDER BY id DESC";
+				$requete = "SELECT * FROM hygro2 ORDER BY id DESC";
 				$resultat = mysqli_query($mysqli, $requete);
 
 				while ($ligne = $resultat->fetch_assoc()) {

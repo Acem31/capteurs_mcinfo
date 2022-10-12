@@ -80,7 +80,7 @@
 		  <div id="hygro">
           <h2>Hygrométrie 2</h2>
 			<p><?php
-				$requete = "SELECT * FROM hygro1 ORDER BY id DESC";
+				$requete = "SELECT * FROM hygro2 ORDER BY id DESC";
     $resultat = mysqli_query($mysqli, $requete);
 
     mysqli_data_seek($resultat, 0);
