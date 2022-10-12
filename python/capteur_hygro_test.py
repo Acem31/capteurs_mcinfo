@@ -23,8 +23,6 @@ horodatage_strg = horodatage.strftime("%H:%M")
 horodatage_day = horodatage.strftime("%d-%m")
 
 humidity1, temperature = Adafruit_DHT.read_retry(Adafruit_DHT.DHT22, 19)
-time.sleep(3)
-humidity2, temperature = Adafruit_DHT.read_retry(Adafruit_DHT.DHT22, 6)
 
 if humidity1 == None :
       print ("Humidité :", 0, "%")
@@ -46,6 +44,8 @@ else:
       mycursor.execute(sql, val)
       conn.commit()
 
+
+humidity2, temperature = Adafruit_DHT.read_retry(Adafruit_DHT.DHT22, 6)
 
 if humidity2 == None :
       print ("Humidité :", 0, "%")
