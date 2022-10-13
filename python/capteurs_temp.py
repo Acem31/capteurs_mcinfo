@@ -5,6 +5,7 @@ import board
 import mysql.connector
 from datetime import datetime
 import time
+import RPi.GPIO as GPIO  
 
 
 conn = mysql.connector.connect(
@@ -136,3 +137,5 @@ else:
       val = (0, horodatage_strg, horodatage_day)
       mycursor.execute(sql, val)
       conn.commit()
+
+GPIO.cleanup()
