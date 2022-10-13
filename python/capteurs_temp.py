@@ -28,6 +28,12 @@ def extraire_temperature (contenu) :
 
 mycursor = conn.cursor()
 
+dht1 = adafruit_dht.DHT22(board.D19)
+humidity1 = dht1.humidity
+
+dht2 = adafruit_dht.DHT22(board.D6)
+humidity2 = dht2.humidity
+
 mycursor.execute("CREATE TABLE IF NOT EXISTS capteur1 (id INT AUTO_INCREMENT PRIMARY KEY, temperature VARCHAR(255), horodatage VARCHAR(255), date VARCHAR(255))")
 mycursor.execute("CREATE TABLE IF NOT EXISTS capteur2 (id INT AUTO_INCREMENT PRIMARY KEY, temperature VARCHAR(255), horodatage VARCHAR(255), date VARCHAR(255))")
 mycursor.execute("CREATE TABLE IF NOT EXISTS capteur3 (id INT AUTO_INCREMENT PRIMARY KEY, temperature VARCHAR(255), horodatage VARCHAR(255), date VARCHAR(255))")
@@ -90,10 +96,7 @@ else :
     val = (0, horodatage_strg, horodatage_day)
     mycursor.execute(sql, val)
     conn.commit()
-
-dht1 = adafruit_dht.DHT22(board.D19)
-humidity1 = dht1.humidity
-
+	
 if humidity1 == None :
       print ("Humidité :", 0, "%")
       sql = "INSERT INTO hygro1 (humidite, horodatage, date) VALUES (%s, %s, %s)"
@@ -113,9 +116,6 @@ else:
       val = (0, horodatage_strg, horodatage_day)
       mycursor.execute(sql, val)
       conn.commit()
-
-dht2 = adafruit_dht.DHT22(board.D6)
-humidity2 = dht2.humidity
 
 if humidity2 == None :
       print ("Humidité :", 0, "%")
